@@ -1,0 +1,88 @@
+/* ============================================================
+   Admission Filter - Professional Healthcare Styling
+============================================================ */
+
+.admission-filter {
+    display: flex;
+    gap: var(--space-4);
+    margin: var(--space-6) 0;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: var(--space-4);
+    background: var(--surface-secondary);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition);
+}
+
+.admission-filter select {
+    min-width: 240px;
+    padding: var(--space-3) var(--space-4);
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius);
+    font-size: var(--font-base);
+    outline: none;
+    transition: all var(--transition-fast);
+    background: var(--surface-color);
+    color: var(--text-color);
+    font-family: inherit;
+    font-weight: var(--font-regular);
+    cursor: pointer;
+}
+
+.admission-filter select:hover {
+    border-color: var(--primary-400);
+    box-shadow: var(--shadow-sm);
+}
+
+.admission-filter select:focus {
+    border-color: var(--primary-600);
+    box-shadow: var(--focus-ring);
+    background: var(--surface-color);
+}
+
+.admission-filter select:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background: var(--surface-secondary);
+}
+
+/* Filter Button */
+.filter-button {
+    padding: var(--space-3) var(--space-5);
+    background: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-700) 100%);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    font-weight: var(--font-semibold);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    box-shadow: var(--shadow-primary);
+    font-size: var(--font-sm);
+}
+
+.filter-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(2, 132, 199, 0.3);
+}
+
+.filter-button:active {
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .admission-filter {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .admission-filter select {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .filter-button {
+        width: 100%;
+    }
+}

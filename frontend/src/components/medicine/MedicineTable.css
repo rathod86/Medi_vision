@@ -1,0 +1,161 @@
+/* ==========================================
+   Medicine Table Container
+========================================== */
+
+.medicine-table-container {
+    overflow-x: auto;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================
+   Table
+========================================== */
+
+.medicine-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.medicine-table th {
+    background: #0d6efd;
+    color: #ffffff;
+    padding: 14px;
+    text-align: left;
+    font-size: 15px;
+}
+
+.medicine-table td {
+    padding: 14px;
+    border-bottom: 1px solid #eeeeee;
+    vertical-align: middle;
+}
+
+.medicine-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+/* ==========================================
+   Status Badge
+========================================== */
+
+.status {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    min-width: 100px;
+}
+
+.available {
+    background: #198754;
+}
+
+.low {
+    background: #ffc107;
+    color: #000000;
+}
+
+.out {
+    background: #dc3545;
+}
+
+.expired {
+    background: #6c757d;
+}
+
+/* ==========================================
+   Action Buttons
+========================================== */
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Common Button */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 85px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+/* View */
+
+.view-btn {
+    background: #0dcaf0;
+}
+
+.view-btn:hover {
+    background: #0bb5d3;
+}
+
+/* Edit */
+
+.edit-btn {
+    background: #198754;
+}
+
+.edit-btn:hover {
+    background: #157347;
+}
+
+/* Delete */
+
+.delete-btn {
+    background: #dc3545;
+}
+
+.delete-btn:hover {
+    background: #bb2d3b;
+}
+
+/* ==========================================
+   No Data
+========================================== */
+
+.no-data {
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+    color: #666666;
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media (max-width: 768px) {
+
+    .medicine-table th,
+    .medicine-table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

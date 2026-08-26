@@ -1,0 +1,111 @@
+/* ==========================================
+   Edit Doctor Page
+========================================== */
+
+.edit-doctor-page {
+    padding: 30px;
+    background: #f5f7fb;
+    min-height: 100vh;
+}
+
+/* ==========================================
+   Page Title
+========================================== */
+
+.edit-doctor-page h2 {
+    margin-bottom: 20px;
+    color: #1e293b;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* ==========================================
+   Form Container
+========================================== */
+
+.edit-doctor-page .doctor-form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================
+   Buttons
+========================================== */
+
+.edit-doctor-page .form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* ==========================================
+   Update Button
+========================================== */
+
+.edit-doctor-page .save-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.edit-doctor-page .save-btn:hover {
+    background: #1d4ed8;
+}
+
+.edit-doctor-page .save-btn:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+}
+
+/* ==========================================
+   Cancel Button (Future Use)
+========================================== */
+
+.edit-doctor-page .cancel-btn {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.edit-doctor-page .cancel-btn:hover {
+    background: #dc2626;
+}
+
+/* ==========================================
+   Responsive Design
+========================================== */
+
+@media (max-width: 768px) {
+
+    .edit-doctor-page {
+        padding: 15px;
+    }
+
+    .edit-doctor-page .doctor-form {
+        padding: 20px;
+    }
+
+    .edit-doctor-page .form-buttons {
+        flex-direction: column;
+    }
+
+    .edit-doctor-page .save-btn,
+    .edit-doctor-page .cancel-btn {
+        width: 100%;
+    }
+
+}

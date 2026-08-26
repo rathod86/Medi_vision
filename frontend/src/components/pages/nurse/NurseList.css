@@ -1,0 +1,773 @@
+/* =====================================================
+   NURSE LIST PAGE
+===================================================== */
+
+.nurse-list-page {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+
+    padding: 24px;
+
+    background: #f8fafc;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.nurse-list-header {
+    max-width: 1200px;
+
+    margin: 0 auto 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.nurse-list-header h2 {
+    margin: 0;
+
+    color: #111827;
+
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.nurse-list-header p {
+    margin: 6px 0 0;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   ADD NURSE BUTTON
+===================================================== */
+
+.nurse-add-button {
+    border: none;
+    border-radius: 7px;
+
+    padding: 11px 18px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.2s ease,
+        transform 0.15s ease;
+}
+
+.nurse-add-button:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   ERROR
+===================================================== */
+
+.nurse-list-error {
+    max-width: 1200px;
+
+    margin: 0 auto 20px;
+
+    padding: 14px 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    background: #fef2f2;
+
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+
+    color: #991b1b;
+}
+
+.nurse-list-error strong {
+    font-size: 14px;
+}
+
+.nurse-list-error p {
+    margin: 4px 0 0;
+
+    font-size: 13px;
+}
+
+.nurse-list-error button {
+    padding: 8px 15px;
+
+    border: 1px solid #fca5a5;
+    border-radius: 6px;
+
+    background: #ffffff;
+    color: #991b1b;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.nurse-list-error button:hover {
+    background: #fee2e2;
+}
+
+
+/* =====================================================
+   STATISTICS
+===================================================== */
+
+.nurse-statistics {
+    max-width: 1200px;
+
+    margin: 0 auto 20px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+.nurse-stat-card {
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.nurse-stat-card span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #6b7280;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.nurse-stat-card strong {
+    display: block;
+
+    color: #111827;
+
+    font-size: 26px;
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   FILTER BAR
+===================================================== */
+
+.nurse-list-filters {
+    max-width: 1200px;
+
+    margin: 0 auto 12px;
+
+    padding: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.nurse-search {
+    flex: 1;
+}
+
+.nurse-search input {
+    width: 100%;
+
+    min-height: 42px;
+
+    box-sizing: border-box;
+
+    padding: 10px 13px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #111827;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.nurse-search input:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.nurse-search input::placeholder {
+    color: #9ca3af;
+}
+
+
+/* =====================================================
+   STATUS FILTER
+===================================================== */
+
+.nurse-status-filter {
+    width: 180px;
+}
+
+.nurse-status-filter select {
+    width: 100%;
+
+    min-height: 42px;
+
+    box-sizing: border-box;
+
+    padding: 10px 12px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #111827;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    cursor: pointer;
+
+    outline: none;
+}
+
+.nurse-status-filter select:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+
+/* =====================================================
+   RESULT INFORMATION
+===================================================== */
+
+.nurse-result-info {
+    max-width: 1200px;
+
+    margin: 0 auto 12px;
+
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+.nurse-result-info strong {
+    color: #374151;
+}
+
+
+/* =====================================================
+   TABLE CONTAINER
+===================================================== */
+
+.nurse-table-container {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    overflow-x: auto;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.nurse-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 950px;
+}
+
+.nurse-table thead {
+    background: #f9fafb;
+}
+
+.nurse-table th {
+    padding: 14px 16px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    color: #6b7280;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-align: left;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.3px;
+
+    white-space: nowrap;
+}
+
+.nurse-table td {
+    padding: 15px 16px;
+
+    border-bottom: 1px solid #f1f5f9;
+
+    color: #374151;
+
+    font-size: 14px;
+
+    vertical-align: middle;
+}
+
+.nurse-table tbody tr {
+    transition: background 0.15s ease;
+}
+
+.nurse-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+.nurse-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =====================================================
+   NURSE PERSON
+===================================================== */
+
+.nurse-table-person {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    min-width: 180px;
+}
+
+.nurse-table-avatar {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.nurse-table-person div:last-child {
+    min-width: 0;
+}
+
+.nurse-table-person strong {
+    display: block;
+
+    max-width: 180px;
+
+    overflow: hidden;
+
+    color: #111827;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+.nurse-table-person span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #6b7280;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   STATUS BADGES
+===================================================== */
+
+.nurse-status {
+    display: inline-flex;
+
+    align-items: center;
+
+    width: fit-content;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.status-active {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-inactive {
+    background: #f3f4f6;
+    color: #4b5563;
+}
+
+.status-leave {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status-default {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+
+/* =====================================================
+   ACTIONS
+===================================================== */
+
+.nurse-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    white-space: nowrap;
+}
+
+.nurse-actions button {
+    padding: 7px 10px;
+
+    border-radius: 6px;
+
+    font-family: inherit;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.15s ease;
+}
+
+.nurse-actions button:hover {
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   VIEW
+===================================================== */
+
+.action-view {
+    border: 1px solid #bfdbfe;
+
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+.action-view:hover {
+    background: #dbeafe;
+}
+
+
+/* =====================================================
+   EDIT
+===================================================== */
+
+.action-edit {
+    border: 1px solid #c7d2fe;
+
+    background: #eef2ff;
+    color: #4338ca;
+}
+
+.action-edit:hover {
+    background: #e0e7ff;
+}
+
+
+/* =====================================================
+   DELETE
+===================================================== */
+
+.action-delete {
+    border: 1px solid #fecaca;
+
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.action-delete:hover {
+    background: #fee2e2;
+}
+
+.action-delete:disabled {
+    opacity: 0.55;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.nurse-empty-state {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 60px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+.nurse-empty-icon {
+    width: 64px;
+    height: 64px;
+
+    margin-bottom: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #eff6ff;
+
+    font-size: 30px;
+}
+
+.nurse-empty-state h3 {
+    margin: 0 0 7px;
+
+    color: #111827;
+
+    font-size: 18px;
+}
+
+.nurse-empty-state p {
+    margin: 0 0 20px;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.nurse-list-loading {
+    min-height: 400px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+.nurse-spinner {
+    width: 34px;
+    height: 34px;
+
+    margin-bottom: 15px;
+
+    border: 4px solid #e5e7eb;
+    border-top-color: #2563eb;
+
+    border-radius: 50%;
+
+    animation:
+        nurseListSpinner 0.8s linear infinite;
+}
+
+@keyframes nurseListSpinner {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .nurse-list-page {
+        padding: 16px;
+    }
+
+    .nurse-statistics {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .nurse-list-page {
+        padding: 10px;
+    }
+
+    .nurse-list-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .nurse-list-header h2 {
+        font-size: 23px;
+    }
+
+    .nurse-add-button {
+        width: 100%;
+    }
+
+    .nurse-list-filters {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .nurse-search {
+        width: 100%;
+    }
+
+    .nurse-status-filter {
+        width: 100%;
+    }
+
+    .nurse-statistics {
+        grid-template-columns: 1fr;
+    }
+
+    .nurse-stat-card {
+        padding: 16px;
+    }
+
+    .nurse-list-error {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .nurse-list-error button {
+        width: 100%;
+    }
+}

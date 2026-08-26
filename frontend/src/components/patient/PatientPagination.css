@@ -1,0 +1,93 @@
+.patient-pagination{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-top:25px;
+
+flex-wrap:wrap;
+
+gap:15px;
+
+}
+
+.pagination-info{
+
+font-size:15px;
+
+color:#555;
+
+}
+
+.pagination-controls{
+
+display:flex;
+
+gap:8px;
+
+flex-wrap:wrap;
+
+}
+
+.pagination-controls button{
+
+padding:8px 14px;
+
+border:none;
+
+background:#2563eb;
+
+color:white;
+
+cursor:pointer;
+
+border-radius:6px;
+
+transition:.3s;
+
+}
+
+.pagination-controls button:hover{
+
+background:#1d4ed8;
+
+}
+
+.pagination-controls button:disabled{
+
+background:#cbd5e1;
+
+cursor:not-allowed;
+
+}
+
+.active-page{
+
+background:#16a34a !important;
+
+}
+
+.page-size{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+}
+
+.page-size select{
+
+padding:8px 10px;
+
+border:1px solid #ddd;
+
+border-radius:6px;
+
+outline:none;
+
+}

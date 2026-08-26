@@ -1,0 +1,224 @@
+.admin-dashboard {
+    width: 100%;
+    min-height: 100%;
+    padding-bottom: 60px;
+}
+
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+.admin-dashboard-section {
+    margin-top: 48px;
+}
+
+.admin-dashboard-section:first-child {
+    margin-top: 0;
+}
+
+
+/* =====================================================
+   SECTION HEADING
+===================================================== */
+
+.admin-section-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 32px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border-color, #e5e7eb);
+}
+
+.admin-section-heading h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--text-color, #212529);
+    letter-spacing: -0.02em;
+}
+
+.admin-section-heading p {
+    margin: 0;
+    font-size: 15px;
+    color: var(--text-muted, #64748b);
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   STATISTICS
+===================================================== */
+
+.admin-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+
+/* =====================================================
+   DASHBOARD GRID
+===================================================== */
+
+.admin-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    margin-top: 0;
+}
+
+
+.admin-dashboard-grid.two-column {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.admin-dashboard-grid.full-width {
+    grid-template-columns: 1fr;
+}
+
+
+/* =====================================================
+   DASHBOARD CARD
+===================================================== */
+
+.admin-dashboard-card {
+    min-width: 0;
+    background: var(--surface-color, #ffffff);
+    border: 1px solid var(--border-color, #e5e7eb);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm, 0 1px 3px rgba(0, 0, 0, 0.1));
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.admin-dashboard-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary-300, #bae6fd);
+    box-shadow: 0 12px 32px rgba(2, 132, 199, 0.15);
+}
+
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.admin-dashboard-loading {
+    min-height: 400px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    color:
+        var(--muted-color, #6c757d);
+}
+
+
+.dashboard-spinner .spinner-border {
+    width: 40px;
+    height: 40px;
+}
+
+
+/* =====================================================
+   ERROR
+===================================================== */
+
+.admin-dashboard-error {
+    margin-top: 30px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    background:
+        var(--surface-color, #ffffff);
+
+    border-radius: 20px;
+
+    box-shadow:
+        var(--shadow,
+        0 4px 18px rgba(0, 0, 0, 0.08));
+}
+
+
+.admin-dashboard-error h3 {
+    margin-bottom: 10px;
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+
+.admin-dashboard-error p {
+    margin-bottom: 20px;
+
+    color:
+        var(--muted-color, #6c757d);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1200px) {
+
+    .admin-stat-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .admin-dashboard-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .admin-dashboard {
+        padding-bottom: 25px;
+    }
+
+    .admin-stat-grid {
+        grid-template-columns:
+            1fr;
+
+        gap: 15px;
+    }
+
+    .admin-dashboard-grid,
+    .admin-dashboard-grid.two-column {
+        grid-template-columns:
+            1fr;
+
+        gap: 15px;
+
+        margin-top: 20px;
+    }
+
+    .admin-dashboard-section {
+        margin-top: 20px;
+    }
+
+    .admin-section-heading h2 {
+        font-size: 19px;
+    }
+}

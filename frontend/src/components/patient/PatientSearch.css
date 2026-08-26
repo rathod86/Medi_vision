@@ -1,0 +1,39 @@
+.patient-search{
+margin:20px 0;
+}
+
+.search-box{
+display:flex;
+align-items:center;
+background:#fff;
+border:1px solid #ddd;
+border-radius:8px;
+padding:10px 15px;
+box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+
+.search-icon{
+color:#666;
+font-size:18px;
+margin-right:10px;
+}
+
+.search-box input{
+flex:1;
+border:none;
+outline:none;
+font-size:15px;
+background:transparent;
+}
+
+.clear-btn{
+border:none;
+background:none;
+cursor:pointer;
+font-size:18px;
+color:#888;
+}
+
+.clear-btn:hover{
+color:red;
+}

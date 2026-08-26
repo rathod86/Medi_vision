@@ -1,0 +1,181 @@
+.doctor-dashboard {
+    width: 100%;
+    min-height: 100%;
+    padding-bottom: 40px;
+}
+
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+.doctor-dashboard-section {
+    margin-top: 28px;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.doctor-section-heading {
+    margin-bottom: 20px;
+}
+
+.doctor-section-heading h2 {
+    margin: 0;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color:
+        var(--text-color, #212529);
+}
+
+.doctor-section-heading p {
+    margin: 6px 0 0;
+
+    font-size: 14px;
+
+    color:
+        var(--muted-color, #6c757d);
+}
+
+
+/* =====================================================
+   STAT GRID
+===================================================== */
+
+.doctor-stat-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* =====================================================
+   CONTENT GRID
+===================================================== */
+
+.doctor-dashboard-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+
+    margin-top: 28px;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.doctor-dashboard-card {
+    min-width: 0;
+
+    background:
+        var(--surface-color, #ffffff);
+
+    border-radius: 20px;
+
+    box-shadow:
+        var(
+            --shadow,
+            0 4px 18px rgba(0, 0, 0, 0.08)
+        );
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.doctor-dashboard-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.doctor-dashboard-loading {
+    min-height: 400px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color:
+        var(--muted-color, #6c757d);
+}
+
+.doctor-dashboard-loading .spinner-border {
+    width: 40px;
+    height: 40px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1200px) {
+
+    .doctor-stat-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .doctor-dashboard {
+        padding-bottom: 25px;
+    }
+
+    .doctor-dashboard-section {
+        margin-top: 20px;
+    }
+
+    .doctor-stat-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .doctor-dashboard-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        margin-top: 20px;
+    }
+
+    .doctor-section-heading h2 {
+        font-size: 19px;
+    }
+}

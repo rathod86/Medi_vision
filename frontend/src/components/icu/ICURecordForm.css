@@ -1,0 +1,429 @@
+/* =====================================================
+   ICU RECORD FORM
+   File:
+   src/components/icu/ICURecordForm.css
+   ===================================================== */
+
+
+/* =====================================================
+   MAIN CONTAINER
+   ===================================================== */
+
+.icu-form-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.icu-form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.icu-form-header h2 {
+    margin: 0 0 6px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.icu-form-header p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   FORM
+   ===================================================== */
+
+.icu-form {
+    width: 100%;
+}
+
+
+/* =====================================================
+   FORM SECTION
+   ===================================================== */
+
+.icu-form-section {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.icu-form-section h3 {
+    margin: 0 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e5e7eb;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   GRID
+   ===================================================== */
+
+.icu-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+
+/* =====================================================
+   FORM GROUP
+   ===================================================== */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+/* =====================================================
+   LABEL
+   ===================================================== */
+
+.form-group label {
+    margin-bottom: 7px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #374151;
+}
+
+.required {
+    margin-left: 4px;
+    color: #dc2626;
+}
+
+.optional {
+    margin-left: 8px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #6b7280;
+}
+
+
+/* =====================================================
+   INPUT / SELECT / TEXTAREA
+   ===================================================== */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    padding: 11px 12px;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    color: #111827;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* =====================================================
+   INPUT
+   ===================================================== */
+
+.form-group input {
+    height: 44px;
+}
+
+
+/* =====================================================
+   SELECT
+   ===================================================== */
+
+.form-group select {
+    height: 44px;
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   TEXTAREA
+   ===================================================== */
+
+.form-group textarea {
+    min-height: 90px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   FOCUS
+   ===================================================== */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* =====================================================
+   DISABLED
+   ===================================================== */
+
+.form-group input:disabled,
+.form-group select:disabled,
+.form-group textarea:disabled {
+    background: #f3f4f6;
+    color: #6b7280;
+    cursor: not-allowed;
+}
+
+
+/* =====================================================
+   ERROR
+   ===================================================== */
+
+.form-error {
+    margin-top: 5px;
+
+    color: #dc2626;
+
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+
+/* =====================================================
+   CHECKBOX ROW
+   ===================================================== */
+
+.icu-checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    margin-top: 22px;
+    padding-top: 18px;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+
+/* =====================================================
+   CHECKBOX LABEL
+   ===================================================== */
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #374151;
+}
+
+.checkbox-label input {
+    width: 17px;
+    height: 17px;
+
+    margin: 0;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   FORM ACTIONS
+   ===================================================== */
+
+.icu-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 20px 0;
+}
+
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+
+.icu-form-actions button {
+    min-width: 140px;
+
+    height: 44px;
+
+    padding: 0 20px;
+
+    border-radius: 7px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.1s ease;
+}
+
+
+/* =====================================================
+   PRIMARY BUTTON
+   ===================================================== */
+
+.btn-primary {
+    border: 1px solid #2563eb;
+
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+}
+
+.btn-primary:active {
+    transform: translateY(1px);
+}
+
+
+/* =====================================================
+   SECONDARY BUTTON
+   ===================================================== */
+
+.btn-secondary {
+    border: 1px solid #d1d5db;
+
+    background: #ffffff;
+    color: #374151;
+}
+
+.btn-secondary:hover {
+    background: #f3f4f6;
+}
+
+
+/* =====================================================
+   DISABLED BUTTON
+   ===================================================== */
+
+.icu-form-actions button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* =====================================================
+   RESPONSIVE — TABLET
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .icu-form-container {
+        padding: 18px;
+    }
+
+    .icu-form-header h2 {
+        font-size: 24px;
+    }
+
+    .icu-form-section {
+        padding: 18px;
+    }
+
+    .icu-form-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .icu-checkbox-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE — MOBILE
+   ===================================================== */
+
+@media (max-width: 480px) {
+
+    .icu-form-container {
+        padding: 12px;
+    }
+
+    .icu-form-header {
+        margin-bottom: 18px;
+    }
+
+    .icu-form-header h2 {
+        font-size: 21px;
+    }
+
+    .icu-form-header p {
+        font-size: 13px;
+    }
+
+    .icu-form-section {
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .icu-form-section h3 {
+        font-size: 16px;
+    }
+
+    .icu-form-actions {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .icu-form-actions button {
+        width: 100%;
+    }
+
+}

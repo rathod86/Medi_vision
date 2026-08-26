@@ -1,0 +1,139 @@
+/* ==========================================
+   Appointment List Page
+========================================== */
+
+.appointment-list-page{
+
+    padding:30px;
+
+    background:#f5f7fb;
+
+    min-height:100vh;
+
+}
+
+/* ==========================================
+   Header
+========================================== */
+
+.appointment-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+.appointment-header h2{
+
+    margin:0;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#222;
+
+}
+
+.appointment-header p{
+
+    margin-top:8px;
+
+    color:#666;
+
+}
+
+/* ==========================================
+   Add Button
+========================================== */
+
+.add-appointment-btn{
+
+    background:#0d6efd;
+
+    color:#fff;
+
+    border:none;
+
+    padding:12px 22px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    display:flex;
+
+    align-items:center;
+
+    transition:.3s;
+
+}
+
+.add-appointment-btn:hover{
+
+    background:#0b5ed7;
+
+}
+
+/* ==========================================
+   Loading & Error
+========================================== */
+
+.loading-container,
+
+.error-container{
+
+    background:#fff;
+
+    padding:40px;
+
+    border-radius:10px;
+
+    text-align:center;
+
+    margin-top:20px;
+
+    box-shadow:0 3px 8px rgba(0,0,0,.08);
+
+}
+
+.error-container{
+
+    color:#dc3545;
+
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media(max-width:768px){
+
+    .appointment-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:15px;
+
+    }
+
+    .add-appointment-btn{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}

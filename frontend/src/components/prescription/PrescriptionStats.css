@@ -1,0 +1,103 @@
+.prescription-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:20px;
+
+    margin:25px 0;
+}
+
+.stats-card{
+
+    background:#ffffff;
+
+    border-radius:4px;
+
+    padding:20px 18px;
+
+    text-align:center;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.06);
+
+    transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.stats-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.stats-card h3{
+
+    margin-bottom:8px;
+
+    color:rgba(255,255,255,0.95);
+
+    font-size:16px;
+}
+
+.stats-card h2{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#fff;
+}
+
+.total{
+
+    border-left:6px solid #0d6efd;
+}
+
+.today{
+
+    border-left:6px solid #20c997;
+}
+
+.draft{
+
+    border-left:6px solid #6c757d;
+}
+
+.total{
+    background:#0d6efd;
+}
+.today{
+    background:#6610f2;
+}
+.draft{
+    background:#6c757d;
+}
+.issued{
+    background:#0dcaf0;
+}
+.dispensed{
+    background:#ffc107;
+    color:#1f2d3d;
+}
+.completed{
+    background:#198754;
+}
+.cancelled{
+    background:#dc3545;
+}
+
+@media(max-width:768px){
+
+    .prescription-stats{
+
+        grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+
+    }
+
+    .stats-card h2{
+
+        font-size:28px;
+    }
+
+}

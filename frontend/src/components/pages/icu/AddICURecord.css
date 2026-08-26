@@ -1,0 +1,203 @@
+/* =====================================================
+   ADD ICU RECORD PAGE
+   File:
+   src/components/pages/icu/AddICURecord.css
+   ===================================================== */
+
+
+/* =====================================================
+   PAGE CONTAINER
+   ===================================================== */
+
+.icu-add-page {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 24px;
+
+    box-sizing: border-box;
+
+    background: #f5f7fb;
+}
+
+
+/* =====================================================
+   FORM WRAPPER
+   ===================================================== */
+
+.icu-add-page .icu-form-container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   PAGE TITLE
+   ===================================================== */
+
+.icu-add-page .icu-form-header {
+    margin-bottom: 24px;
+}
+
+
+/* =====================================================
+   FORM SECTIONS
+   ===================================================== */
+
+.icu-add-page .icu-form-section {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =====================================================
+   FORM INPUTS
+   ===================================================== */
+
+.icu-add-page input,
+.icu-add-page select,
+.icu-add-page textarea {
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   ACTION AREA
+   ===================================================== */
+
+.icu-add-page .icu-form-actions {
+    display: flex;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 10px;
+}
+
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+
+.icu-add-page .btn-primary,
+.icu-add-page .btn-secondary {
+    min-width: 140px;
+
+    height: 44px;
+
+    padding: 0 20px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* =====================================================
+   PRIMARY BUTTON
+   ===================================================== */
+
+.icu-add-page .btn-primary {
+    border: 1px solid #2563eb;
+
+    background: #2563eb;
+
+    color: #ffffff;
+}
+
+
+.icu-add-page .btn-primary:hover {
+    background: #1d4ed8;
+}
+
+
+/* =====================================================
+   SECONDARY BUTTON
+   ===================================================== */
+
+.icu-add-page .btn-secondary {
+    border: 1px solid #d1d5db;
+
+    background: #ffffff;
+
+    color: #374151;
+}
+
+
+.icu-add-page .btn-secondary:hover {
+    background: #f3f4f6;
+}
+
+
+/* =====================================================
+   DISABLED BUTTON
+   ===================================================== */
+
+.icu-add-page button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* =====================================================
+   RESPONSIVE TABLET
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .icu-add-page {
+        padding: 18px;
+    }
+
+    .icu-add-page .icu-form-actions {
+        justify-content: stretch;
+    }
+
+    .icu-add-page .btn-primary,
+    .icu-add-page .btn-secondary {
+        flex: 1;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE MOBILE
+   ===================================================== */
+
+@media (max-width: 480px) {
+
+    .icu-add-page {
+        padding: 12px;
+    }
+
+    .icu-add-page .icu-form-actions {
+        flex-direction: column-reverse;
+
+        width: 100%;
+    }
+
+    .icu-add-page .btn-primary,
+    .icu-add-page .btn-secondary {
+        width: 100%;
+    }
+}

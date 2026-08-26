@@ -1,0 +1,27 @@
+.edit-admission-page{
+
+    padding:30px;
+
+    background:#f5f7fb;
+
+    min-height:100vh;
+
+}
+
+.loading-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:70vh;
+
+}
+
+.loading-container h2{
+
+    color:#0d6efd;
+
+}

@@ -1,0 +1,96 @@
+/* ==========================
+   Doctor Search
+========================== */
+
+.doctor-search{
+    flex:1;
+    min-width:300px;
+}
+
+.search-box{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.search-box input{
+
+    width:100%;
+
+    padding:12px 45px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:10px;
+
+    background:#fff;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+.search-box input:focus{
+
+    outline:none;
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+
+}
+
+.search-icon{
+
+    position:absolute;
+
+    left:15px;
+
+    color:#64748b;
+
+    font-size:16px;
+
+}
+
+.clear-btn{
+
+    position:absolute;
+
+    right:12px;
+
+    background:none;
+
+    border:none;
+
+    color:#64748b;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+.clear-btn:hover{
+
+    color:#ef4444;
+
+}
+
+@media(max-width:768px){
+
+    .doctor-search{
+
+        width:100%;
+
+        min-width:100%;
+
+    }
+
+}

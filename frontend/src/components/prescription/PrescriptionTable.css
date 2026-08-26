@@ -1,0 +1,176 @@
+.prescription-table-container{
+
+    overflow-x:auto;
+
+    background:#fff;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.prescription-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.prescription-table th{
+
+    background:#0d6efd;
+
+    color:#fff;
+
+    padding:15px;
+
+    text-align:left;
+
+}
+
+.prescription-table td{
+
+    padding:14px;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.prescription-table tbody tr:hover{
+
+    background:#f8f9fa;
+
+}
+
+.status{
+
+    color:white;
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.draft{
+
+    background:#6c757d;
+
+}
+
+.issued{
+
+    background:#0dcaf0;
+
+}
+
+.dispensed{
+
+    background:#ffc107;
+
+    color:#000;
+
+}
+
+.completed{
+
+    background:#198754;
+
+}
+
+.cancelled{
+
+    background:#dc3545;
+
+}
+
+.action-buttons{
+
+    display:flex;
+
+    gap:8px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn{
+
+    padding:8px 14px;
+
+    border:none;
+
+    border-radius:6px;
+
+    color:white;
+
+    text-decoration:none;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.view-btn{
+
+    background:#0dcaf0;
+
+}
+
+.edit-btn{
+
+    background:#198754;
+
+}
+
+.delete-btn{
+
+    background:#dc3545;
+
+}
+
+.btn:hover{
+
+    opacity:.9;
+
+}
+
+.no-data{
+
+    text-align:center;
+
+    padding:40px;
+
+    font-size:20px;
+
+    color:#777;
+
+}
+
+@media(max-width:768px){
+
+    .prescription-table th,
+    .prescription-table td{
+
+        font-size:14px;
+
+        padding:10px;
+
+    }
+
+    .action-buttons{
+
+        flex-direction:column;
+
+    }
+
+}

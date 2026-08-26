@@ -1,0 +1,431 @@
+/* =====================================================
+   MEDICAL HISTORY FORM
+   ===================================================== */
+
+.medical-history-form {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =====================================================
+   SECTION
+   ===================================================== */
+
+.medical-history-section {
+    background: #ffffff;
+    border: 1px solid #e1e5ea;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =====================================================
+   SECTION TITLE
+   ===================================================== */
+
+.medical-history-section h2 {
+    margin: 0 0 22px 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e5e7eb;
+
+    font-size: 20px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+
+/* =====================================================
+   FORM GRID
+   ===================================================== */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+
+/* =====================================================
+   FORM GROUP
+   ===================================================== */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+/* =====================================================
+   FULL WIDTH
+   ===================================================== */
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+
+/* =====================================================
+   LABEL
+   ===================================================== */
+
+.form-group label {
+    margin-bottom: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+
+/* Required star */
+
+.form-group label span {
+    color: #dc2626;
+    margin-left: 3px;
+}
+
+
+/* =====================================================
+   INPUT / SELECT / TEXTAREA
+   ===================================================== */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    background: #ffffff;
+    color: #111827;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+/* =====================================================
+   INPUT
+   ===================================================== */
+
+.form-group input {
+    height: 46px;
+    padding: 0 14px;
+}
+
+
+/* =====================================================
+   SELECT
+   ===================================================== */
+
+.form-group select {
+    height: 46px;
+    padding: 0 14px;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   TEXTAREA
+   ===================================================== */
+
+.form-group textarea {
+    min-height: 120px;
+    padding: 12px 14px;
+
+    resize: vertical;
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   PLACEHOLDER
+   ===================================================== */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9ca3af;
+}
+
+
+/* =====================================================
+   FOCUS
+   ===================================================== */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* =====================================================
+   DISABLED
+   ===================================================== */
+
+.form-group input:disabled,
+.form-group select:disabled,
+.form-group textarea:disabled {
+    background: #f3f4f6;
+    color: #6b7280;
+    cursor: not-allowed;
+}
+
+
+/* =====================================================
+   ERROR INPUT
+   ===================================================== */
+
+.form-group input.input-error,
+.form-group select.input-error,
+.form-group textarea.input-error {
+    border-color: #dc2626;
+}
+
+
+/* =====================================================
+   ERROR MESSAGE
+   ===================================================== */
+
+.error-message {
+    margin-top: 6px;
+
+    color: #dc2626;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   FORM ACTIONS
+   ===================================================== */
+
+.medical-history-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 20px 0 10px;
+}
+
+
+/* =====================================================
+   COMMON BUTTON
+   ===================================================== */
+
+.medical-history-form-actions button {
+    min-width: 130px;
+    height: 44px;
+
+    padding: 0 20px;
+
+    border-radius: 8px;
+    border: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.15s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* =====================================================
+   PRIMARY BUTTON
+   ===================================================== */
+
+.primary-button {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.primary-button:hover:not(:disabled) {
+    background: #1d4ed8;
+
+    box-shadow:
+        0 4px 10px rgba(37, 99, 235, 0.25);
+
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   SECONDARY BUTTON
+   ===================================================== */
+
+.secondary-button {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+.secondary-button:hover:not(:disabled) {
+    background: #d1d5db;
+
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   RESET BUTTON
+   ===================================================== */
+
+.reset-button {
+    background: #f3f4f6;
+    color: #374151;
+
+    border: 1px solid #d1d5db !important;
+}
+
+.reset-button:hover:not(:disabled) {
+    background: #e5e7eb;
+
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   DISABLED BUTTON
+   ===================================================== */
+
+.medical-history-form-actions button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =====================================================
+   DATE INPUT
+   ===================================================== */
+
+.form-group input[type="date"] {
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   SELECT ARROW / OPTION
+   ===================================================== */
+
+.form-group select option {
+    color: #111827;
+    background: #ffffff;
+}
+
+
+/* =====================================================
+   RESPONSIVE - TABLET
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .medical-history-form {
+        padding: 16px;
+    }
+
+    .medical-history-section {
+        padding: 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .form-group.full-width {
+        grid-column: auto;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE - MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .medical-history-form {
+        padding: 10px;
+    }
+
+    .medical-history-section {
+        padding: 16px;
+        margin-bottom: 16px;
+        border-radius: 10px;
+    }
+
+    .medical-history-section h2 {
+        font-size: 18px;
+        margin-bottom: 18px;
+    }
+
+    .form-group input,
+    .form-group select {
+        height: 44px;
+    }
+
+    .form-group textarea {
+        min-height: 100px;
+    }
+
+    .medical-history-form-actions {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .medical-history-form-actions button {
+        width: 100%;
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 400px) {
+
+    .medical-history-section {
+        padding: 13px;
+    }
+
+    .medical-history-section h2 {
+        font-size: 17px;
+    }
+
+    .form-group label {
+        font-size: 13px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 13px;
+    }
+}

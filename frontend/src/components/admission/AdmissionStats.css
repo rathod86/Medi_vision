@@ -1,0 +1,131 @@
+/* ============================================================
+   Admission Statistics - Professional Healthcare Styling
+============================================================ */
+
+.admission-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-6);
+    margin: var(--space-6) 0;
+}
+
+.stat-card {
+    background: var(--surface-color);
+    border-radius: var(--radius-lg);
+    padding: var(--space-8);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-600), var(--primary-700));
+}
+
+.stat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-200);
+}
+
+.stat-card h3 {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: var(--font-sm);
+    font-weight: var(--font-semibold);
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.stat-card h2 {
+    margin-top: var(--space-4);
+    font-size: var(--font-4xl);
+    font-weight: var(--font-extrabold);
+    color: var(--text-color);
+    letter-spacing: -0.02em;
+}
+
+.stat-card p {
+    margin-top: var(--space-2);
+    color: var(--text-secondary);
+    font-size: var(--font-sm);
+}
+
+.stat-card.success::before {
+    background: linear-gradient(90deg, var(--success-600), var(--success-700));
+}
+
+.stat-card.warning::before {
+    background: linear-gradient(90deg, var(--warning-600), var(--warning-700));
+}
+
+.stat-card.danger::before {
+    background: linear-gradient(90deg, var(--danger-600), var(--danger-700));
+}
+
+.stat-card.info::before {
+    background: linear-gradient(90deg, var(--info-600), var(--info-700));
+}
+
+/* ==========================================
+   Colors
+========================================== */
+
+.total{
+
+    border-left:6px solid #0d6efd;
+
+}
+
+.today{
+
+    border-left:6px solid #6610f2;
+
+}
+
+.admitted{
+
+    border-left:6px solid #198754;
+
+}
+
+.observation{
+
+    border-left:6px solid #fd7e14;
+
+}
+
+.transferred{
+
+    border-left:6px solid #0dcaf0;
+
+}
+
+.discharged{
+
+    border-left:6px solid #6c757d;
+
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media(max-width:768px){
+
+    .admission-stats{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

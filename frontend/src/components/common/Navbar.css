@@ -1,0 +1,338 @@
+/* ============================================================
+   Premium Navbar — Medi Vision
+   ============================================================ */
+
+.navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--navbar-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--space-6);
+    background: rgba(255, 255, 255, 0.92);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    z-index: 200;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.logo {
+    width: 38px;
+    height: 38px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    border: 2px solid var(--primary-100);
+    box-shadow: var(--shadow-xs);
+}
+
+.logo-container h3 {
+    margin: 0;
+    font-size: var(--font-lg);
+    font-weight: 800;
+    color: var(--text-color);
+    letter-spacing: -0.03em;
+}
+
+.logo-container h3::after {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 3px;
+    margin-top: 4px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--primary-600), var(--teal-500));
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.notification-btn {
+    position: relative;
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+    background: var(--surface-color);
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: var(--transition);
+}
+
+.notification-btn:hover {
+    background: var(--primary-600);
+    color: #fff;
+    border-color: var(--primary-600);
+    box-shadow: var(--shadow-primary);
+}
+
+.notification-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    border-radius: var(--radius-full);
+    background: var(--danger-color);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fff;
+}
+
+.profile-menu {
+    position: relative;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: 8px 14px 8px 10px;
+    border-radius: var(--radius-md);
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    transition: var(--transition);
+}
+
+.user-profile:hover,
+.user-profile.active {
+    border-color: var(--primary-200);
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-1px);
+}
+
+.user-icon {
+    font-size: var(--font-2xl);
+    color: var(--primary-600);
+}
+
+.user-profile h6 {
+    margin: 0;
+    color: var(--text-color);
+    font-size: var(--font-sm);
+    font-weight: 700;
+}
+
+.user-profile small {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
+.profile-chevron {
+    font-size: 11px;
+    color: var(--text-muted);
+    transition: transform var(--transition-fast);
+}
+
+.profile-chevron.open {
+    transform: rotate(180deg);
+}
+
+.profile-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: 320px;
+    max-width: calc(100vw - 30px);
+    max-height: calc(100vh - 120px);
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    z-index: 300;
+    overflow-y: auto;
+    overflow-x: hidden;
+    animation: medi-dropdown-in 0.2s ease;
+}
+
+@keyframes medi-dropdown-in {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-dropdown-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-5);
+    background: linear-gradient(135deg, var(--primary-50), #f0fdfa);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.profile-dropdown-avatar {
+    font-size: var(--font-2xl);
+    color: var(--primary-600);
+    flex-shrink: 0;
+}
+
+.profile-dropdown-header strong {
+    display: block;
+    color: var(--text-color);
+    font-size: var(--font-sm);
+    margin-bottom: 6px;
+}
+
+.profile-role-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    background: var(--primary-100);
+    color: var(--primary-700);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.profile-dropdown-body {
+    padding: var(--space-4) var(--space-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.profile-info-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    color: var(--text-muted);
+    font-size: var(--font-sm);
+    word-break: break-word;
+}
+
+.profile-info-row svg {
+    color: var(--primary-600);
+    flex-shrink: 0;
+}
+
+.profile-dropdown-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-5) var(--space-5);
+    border-top: 1px solid var(--border-light);
+}
+
+.profile-action-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    border: none;
+    background: var(--surface-alt);
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: var(--font-sm);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.profile-action-btn:hover {
+    background: var(--primary-50);
+    color: var(--primary-700);
+}
+
+.profile-action-btn.logout {
+    background: var(--danger-bg);
+    color: var(--danger-text);
+}
+
+.profile-action-btn.logout:hover {
+    background: var(--danger-color);
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        padding: 0 var(--space-4);
+    }
+
+    .navbar-right {
+        gap: var(--space-3);
+    }
+
+    .logo-container h3 {
+        display: none;
+    }
+
+    .logo-container h3::after {
+        display: none;
+    }
+
+    .user-profile-text {
+        display: none;
+    }
+
+    .profile-chevron {
+        display: none;
+    }
+
+    .profile-dropdown {
+        width: 280px;
+        max-width: calc(100vw - 20px);
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-container {
+        padding: 0 var(--space-3);
+    }
+
+    .logo {
+        width: 36px;
+        height: 36px;
+    }
+
+    .notification-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .user-profile {
+        padding: 6px 10px;
+    }
+
+    .user-icon {
+        font-size: 28px;
+    }
+
+    .profile-dropdown {
+        width: calc(100vw - 20px);
+        max-width: 300px;
+    }
+}

@@ -1,0 +1,174 @@
+/* Design Tokens - Professional Healthcare Application */
+:root {
+    /* Primary Brand Colors - Medical Blue & Teal */
+    --primary-50: #f0f9ff;
+    --primary-100: #e0f2fe;
+    --primary-200: #bae6fd;
+    --primary-300: #7dd3fc;
+    --primary-400: #38bdf8;
+    --primary-500: #0ea5e9;
+    --primary-600: #0284c7;
+    --primary-700: #0369a1;
+    --primary-800: #075985;
+    --primary-900: #0c3d66;
+
+    /* Secondary Colors - Healing Teal */
+    --secondary-50: #f0fdfa;
+    --secondary-100: #ccfbf1;
+    --secondary-500: #14b8a6;
+    --secondary-600: #0d9488;
+    --secondary-700: #0f766e;
+
+    /* Status Colors */
+    --success-50: #f0fdf4;
+    --success-100: #dcfce7;
+    --success-500: #22c55e;
+    --success-600: #16a34a;
+    --success-700: #15803d;
+
+    --warning-50: #fefce8;
+    --warning-100: #fef3c7;
+    --warning-500: #eab308;
+    --warning-600: #ca8a04;
+    --warning-700: #a16207;
+
+    --danger-50: #fef2f2;
+    --danger-100: #fee2e2;
+    --danger-500: #ef4444;
+    --danger-600: #dc2626;
+    --danger-700: #b91c1c;
+
+    --info-50: #eff6ff;
+    --info-100: #dbeafe;
+    --info-500: #3b82f6;
+    --info-600: #2563eb;
+    --info-700: #1d4ed8;
+
+    /* Semantic Colors */
+    --accent: var(--primary-600);
+    --accent-bg: var(--primary-50);
+    --accent-border: var(--primary-200);
+    --primary-color: var(--primary-600);
+    
+    /* Background Colors */
+    --background-color: #f8fafc;
+    --background-gradient: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #eef2ff 100%);
+    --surface-color: #ffffff;
+    --surface-secondary: #f8fafc;
+    --surface-elevated: #ffffff;
+    
+    /* Text Colors */
+    --text-color: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    --text-light: #94a3b8;
+    
+    /* Border Colors */
+    --border-color: #e2e8f0;
+    --border-light: #f1f5f9;
+    
+    /* Shadow System */
+    --shadow-xs: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+    --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.1), 0 1px 2px -1px rgba(15, 23, 42, 0.1);
+    --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.1), 0 2px 4px -2px rgba(15, 23, 42, 0.1);
+    --shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.1), 0 4px 6px -4px rgba(15, 23, 42, 0.1);
+    --shadow-lg: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.1);
+    --shadow-xl: 0 25px 50px -12px rgba(15, 23, 42, 0.15);
+    --shadow-2xl: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+    --shadow-primary: 0 12px 28px rgba(2, 132, 199, 0.18);
+    
+    /* Border Radius - Consistent rounded corners */
+    --radius-sm: 8px;
+    --radius: 12px;
+    --radius-md: 14px;
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+    --radius-2xl: 24px;
+    --radius-full: 9999px;
+    
+    
+    /* Spacing Scale */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+    
+    /* Typography Scale — balanced for dashboard UI */
+    --font-xs: 0.75rem;
+    --font-sm: 0.875rem;
+    --font-base: 0.9375rem;
+    --font-lg: 1.0625rem;
+    --font-xl: 1.1875rem;
+    --font-2xl: 1.375rem;
+    --font-3xl: 1.625rem;
+    --font-4xl: 1.875rem;
+    
+    /* Font Weights */
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-extrabold: 800;
+    
+    /* Transitions */
+    --transition-fast: 0.15s ease;
+    --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Layout */
+    --navbar-height: 64px;
+    --sidebar-width: 240px;
+    --sidebar-collapsed: 72px;
+    
+    /* Focus States */
+    --focus-ring: 0 0 0 3px rgba(2, 132, 199, 0.1);
+    --focus-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
+
+    /* Extended semantic tokens (used across component CSS) */
+    --teal-500: #14b8a6;
+    --text-inverse: #ffffff;
+    --surface-alt: #f1f5f9;
+    --danger-color: #dc2626;
+    --danger-bg: #fef2f2;
+    --danger-text: #b91c1c;
+    --success-bg: #dcfce7;
+    --success-text: #15803d;
+    --warning-bg: #fef3c7;
+    --warning-text: #a16207;
+    --info-bg: #dbeafe;
+    --info-text: #1d4ed8;
+}
+
+/* Dark theme overrides */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #1a1f36;
+        --background-gradient: linear-gradient(135deg, #1a1f36 0%, #1e293b 50%, #1a1f36 100%);
+        --surface-color: #0f172a;
+        --surface-secondary: #1a1f36;
+        --surface-elevated: #1e293b;
+        
+        --border-color: #334155;
+        --border-light: #1e293b;
+        
+        --text-color: #f1f5f9;
+        --text-secondary: #cbd5e1;
+        --text-muted: #94a3b8;
+        --text-light: #64748b;
+        
+        --accent: var(--primary-400);
+        --accent-bg: rgba(2, 132, 199, 0.1);
+        --accent-border: var(--primary-700);
+        
+        --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+        --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+        --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.6);
+        --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.7);
+    }
+}

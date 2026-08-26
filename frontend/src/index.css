@@ -1,0 +1,505 @@
+@import "./styles/variables.css";
+@import "./styles/professional-ui.css";
+
+/* ============================================================
+   Medi Vision — Global Foundation & Base Styles
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+
+/* ============================================================
+   RESET & BASE STYLES
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+body {
+    font-family:
+        'Plus Jakarta Sans',
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        'Helvetica Neue',
+        Arial,
+        sans-serif;
+
+    background: var(--background-color);
+    background-image: var(--background-gradient);
+
+    color: var(--text-color);
+
+    line-height: 1.6;
+
+    min-height: 100vh;
+
+    font-size: var(--font-base);
+    font-weight: var(--font-regular);
+
+    overflow-x: hidden;
+}
+
+
+/* ============================================================
+   INTERACTIVE ELEMENTS
+   ============================================================ */
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+input:invalid,
+textarea:invalid {
+    box-shadow: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+
+/* ============================================================
+   LINKS
+   ============================================================ */
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--primary-600);
+}
+
+
+/* ============================================================
+   LISTS
+   ============================================================ */
+
+ul,
+ol {
+    list-style: none;
+}
+
+li {
+    margin: 0;
+}
+
+
+/* ============================================================
+   MEDIA
+   IMPORTANT:
+   Do NOT use width: inherit / height: inherit on SVG.
+   ============================================================ */
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+img,
+picture,
+video,
+canvas {
+    height: auto;
+}
+
+/*
+   SVG elements must NOT inherit width/height
+   from large parent containers.
+
+   Removed intentionally:
+
+   svg {
+       width: inherit;
+       height: inherit;
+   }
+
+   That rule can make an icon inherit the dimensions
+   of a large parent and appear as a giant shape.
+*/
+
+svg {
+    flex-shrink: 0;
+}
+
+
+/* ============================================================
+   TEXT SELECTION
+   ============================================================ */
+
+::selection {
+    background: var(--primary-200);
+    color: var(--text-color);
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: var(--primary-200);
+    color: var(--text-color);
+    text-shadow: none;
+}
+
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--surface-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: var(--radius-full);
+    transition: background var(--transition-fast);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+
+/* Firefox Scrollbar */
+
+* {
+    scrollbar-color:
+        var(--border-color)
+        var(--surface-secondary);
+
+    scrollbar-width: thin;
+}
+
+
+/* ============================================================
+   PLACEHOLDER
+   ============================================================ */
+
+::placeholder {
+    color: var(--text-muted);
+    opacity: 1;
+}
+
+::-ms-input-placeholder {
+    color: var(--text-muted);
+}
+
+
+/* ============================================================
+   UTILITY CLASSES
+   ============================================================ */
+
+.container-fluid-custom {
+    width: 100%;
+    padding: var(--space-4) var(--space-6);
+    margin: 0 auto;
+}
+
+.card-custom {
+    background: var(--surface-color);
+
+    border-radius: var(--radius-lg);
+
+    border: 1px solid var(--border-color);
+
+    box-shadow: var(--shadow-sm);
+
+    padding: var(--space-6);
+
+    transition: all var(--transition);
+}
+
+.card-custom:hover {
+    box-shadow: var(--shadow);
+
+    border-color: var(--primary-200);
+}
+
+
+/* ============================================================
+   TEXT ALIGNMENT
+   ============================================================ */
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+
+/* ============================================================
+   MARGIN UTILITIES
+   ============================================================ */
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ============================================================
+   PADDING UTILITIES
+   ============================================================ */
+
+.p-4 {
+    padding: var(--space-4);
+}
+
+.p-6 {
+    padding: var(--space-6);
+}
+
+.px-4 {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+}
+
+.py-4 {
+    padding-top: var(--space-4);
+    padding-bottom: var(--space-4);
+}
+
+
+/* ============================================================
+   DISPLAY UTILITIES
+   ============================================================ */
+
+.block {
+    display: block;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* ============================================================
+   STATES
+   ============================================================ */
+
+.dashboard-widget-loading {
+    color: var(--text-muted);
+
+    font-size: var(--font-sm);
+
+    padding: 12px 0;
+
+    text-align: center;
+}
+
+.quick-actions-empty {
+    color: var(--text-muted);
+
+    font-size: var(--font-sm);
+
+    text-align: center;
+
+    padding: var(--space-6);
+}
+
+
+/* ============================================================
+   RESPONSIVE TYPOGRAPHY
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: var(--font-2xl);
+    }
+
+    h2 {
+        font-size: var(--font-xl);
+    }
+
+    h3 {
+        font-size: var(--font-lg);
+    }
+
+    body {
+        font-size: var(--font-sm);
+    }
+}
+
+
+/* ============================================================
+   ACCESSIBILITY
+   ============================================================ */
+
+.sr-only {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+
+    clip: rect(0, 0, 0, 0);
+
+    white-space: nowrap;
+
+    border-width: 0;
+}
+
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideInUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes slideInDown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.fade-in {
+    animation: fadeIn var(--transition);
+}
+
+
+.slide-in-up {
+    animation: slideInUp var(--transition);
+}
+
+
+.slide-in-down {
+    animation: slideInDown var(--transition);
+}
+
+
+/* ============================================================
+   SVG SAFETY
+   ============================================================ */
+
+/*
+   Prevent SVG icons from accidentally becoming huge.
+
+   Individual icons can still define their own
+   width/height through their component CSS.
+*/
+
+svg:not([width]):not([height]) {
+    width: 1em;
+    height: 1em;
+}
+
+
+/* ============================================================
+   RESPONSIVE BODY
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+}
+
+@media (max-width: 480px) {
+
+    body {
+        min-width: 320px;
+    }
+}

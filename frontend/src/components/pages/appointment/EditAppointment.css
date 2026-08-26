@@ -1,0 +1,43 @@
+.edit-appointment-page{
+
+    padding:25px;
+
+}
+
+.page-header{
+
+    margin-bottom:25px;
+
+}
+
+.page-header h2{
+
+    margin:0;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#222;
+
+}
+
+.page-header p{
+
+    margin-top:8px;
+
+    color:#666;
+
+}
+
+.loading{
+
+    padding:40px;
+
+    text-align:center;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}

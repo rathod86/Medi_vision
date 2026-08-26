@@ -1,0 +1,53 @@
+.todays-discharges {
+    background: var(--surface-color);
+    margin-top: 30px;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.todays-discharges .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.todays-discharges .section-icon {
+    color: var(--danger-color);
+    font-size: 24px;
+}
+
+.todays-discharges .section-header h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.todays-discharges table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.todays-discharges th,
+.todays-discharges td {
+    padding: 16px 18px;
+    text-align: left;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+.todays-discharges th {
+    background: var(--surface-alt);
+    color: var(--text-muted);
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.todays-discharges tbody tr:nth-child(odd) {
+    background: rgba(37, 99, 235, 0.03);
+}
+
+.todays-discharges tbody tr:hover {
+    background: rgba(37, 99, 235, 0.08);
+}

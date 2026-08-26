@@ -1,0 +1,57 @@
+/* ==========================================
+   Appointment Filter
+========================================== */
+
+.appointment-filter{
+
+    display:flex;
+
+    gap:20px;
+
+    margin:20px 0;
+
+    flex-wrap:wrap;
+
+}
+
+.appointment-filter select{
+
+    min-width:220px;
+
+    padding:12px;
+
+    border:1px solid #ddd;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.appointment-filter select:focus{
+
+    border-color:#0d6efd;
+
+    box-shadow:0 0 6px rgba(13,110,253,.15);
+
+}
+
+@media(max-width:768px){
+
+    .appointment-filter{
+
+        flex-direction:column;
+
+    }
+
+    .appointment-filter select{
+
+        width:100%;
+
+    }
+
+}

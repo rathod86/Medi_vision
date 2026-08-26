@@ -1,0 +1,69 @@
+.recent-doctors {
+    background: var(--surface-color);
+    margin-top: 30px;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.recent-doctors h3 {
+    margin-bottom: 22px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.recent-doctors table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.recent-doctors th,
+.recent-doctors td {
+    padding: 16px 18px;
+    text-align: left;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+.recent-doctors th {
+    background: var(--surface-alt);
+    color: var(--text-muted);
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.recent-doctors tbody tr:nth-child(odd) {
+    background: rgba(37, 99, 235, 0.03);
+}
+
+.recent-doctors tbody tr:hover {
+    background: rgba(37, 99, 235, 0.08);
+}
+
+.recent-doctors td {
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+.recent-doctors span {
+    display: inline-flex;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.Available {
+    background: hwb(120 8% 20% / 0.122);
+    color: var(--success-color);
+}
+
+.busy {
+    background: rgba(245, 158, 11, 0.12);
+    color: var(--warning-color);
+}
+
+.on-leave {
+    background: rgba(239, 68, 68, 0.12);
+    color: var(--danger-color);
+}

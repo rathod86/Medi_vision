@@ -1,0 +1,204 @@
+/* =====================================================
+   MAIN LAYOUT - Professional Healthcare Application
+===================================================== */
+
+.main-layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--background-color);
+    background-image: var(--background-gradient);
+}
+
+/* =====================================================
+   LAYOUT BODY
+===================================================== */
+
+.layout-body {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    min-height: 0;
+    margin-top: var(--navbar-height);
+    position: relative;
+    overflow: hidden;
+}
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.main-content {
+    flex: 1;
+    width: calc(100% - var(--sidebar-width));
+    min-width: 0;
+    min-height: 0;
+    margin-left: var(--sidebar-width);
+    padding: var(--space-5);
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: var(--background-color);
+    background-image: var(--background-gradient);
+    transition: all var(--transition);
+}
+
+.main-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.main-content::-webkit-scrollbar-track {
+    background: var(--surface-secondary);
+    border-radius: var(--radius);
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: var(--radius-full);
+    transition: background var(--transition-fast);
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+/* =====================================================
+   SIDEBAR INTERACTIONS
+===================================================== */
+
+.sidebar:not(.open) ~ .main-content {
+    margin-left: var(--sidebar-collapsed);
+    width: calc(100% - var(--sidebar-collapsed));
+}
+
+/* =====================================================
+   RESPONSIVE - TABLET
+===================================================== */
+
+@media (max-width: 1024px) {
+    .layout-body {
+        flex: 1;
+        min-height: 0;
+    }
+
+    .main-content {
+        width: 100%;
+        margin-left: 0;
+        padding: var(--space-5);
+        min-height: 0;
+    }
+
+    .sidebar:not(.open) ~ .main-content {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* =====================================================
+   RESPONSIVE - MOBILE (768px and below)
+===================================================== */
+
+@media (max-width: 768px) {
+    .layout-body {
+        flex-direction: column;
+        margin-top: var(--navbar-height);
+    }
+
+    .main-content {
+        width: 100%;
+        min-height: 0;
+        margin-left: 0;
+        padding: var(--space-4);
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .sidebar:not(.open) ~ .main-content {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* =====================================================
+   RESPONSIVE - SMALL MOBILE (480px and below)
+===================================================== */
+
+@media (max-width: 480px) {
+    .main-content {
+        padding: var(--space-3);
+    }
+
+    .layout-body {
+        flex: 1;
+        min-height: 0;
+    }
+}
+
+/* =====================================================
+   CONTENT SECTIONS
+===================================================== */
+
+.content-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-8);
+    padding-bottom: var(--space-6);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.content-header-title {
+    margin: 0;
+}
+
+.content-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.content-section {
+    background: var(--surface-color);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition);
+}
+
+.content-section:hover {
+    box-shadow: var(--shadow);
+}
+
+/* =====================================================
+   PAGE TRANSITIONS
+===================================================== */
+
+.page-enter {
+    animation: pageEnter var(--transition-slow) ease;
+}
+
+.page-exit {
+    animation: pageExit var(--transition-fast) ease;
+}
+
+@keyframes pageEnter {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pageExit {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}

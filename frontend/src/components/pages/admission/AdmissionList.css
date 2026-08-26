@@ -1,0 +1,255 @@
+/* =====================================================
+   Admission List Page
+===================================================== */
+
+.admission-list-page {
+
+    padding: 30px;
+
+    background: #f5f7fb;
+
+    min-height: 100vh;
+
+}
+
+/* =====================================================
+   Header
+===================================================== */
+
+.admission-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+}
+
+.admission-header h2 {
+
+    margin: 0;
+
+    font-size: 32px;
+
+    color: #222;
+
+    font-weight: 700;
+
+}
+
+.admission-header p {
+
+    margin-top: 8px;
+
+    color: #666;
+
+    font-size: 15px;
+
+}
+
+/* =====================================================
+   Add Button
+===================================================== */
+
+.add-admission-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background: #0d6efd;
+
+    color: #fff;
+
+    border: none;
+
+    padding: 12px 22px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.add-admission-btn:hover {
+
+    background: #0b5ed7;
+
+    transform: translateY(-2px);
+
+}
+
+/* =====================================================
+   Loading
+===================================================== */
+
+.loading-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 200px;
+
+}
+
+.loading-container h3 {
+
+    color: #0d6efd;
+
+    font-size: 22px;
+
+}
+
+/* =====================================================
+   Error
+===================================================== */
+
+.error-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 200px;
+
+}
+
+.error-container h3 {
+
+    color: #dc3545;
+
+    font-size: 22px;
+
+}
+
+/* =====================================================
+   Statistics
+===================================================== */
+
+.admission-stats {
+
+    margin-bottom: 25px;
+
+}
+
+/* =====================================================
+   Search
+===================================================== */
+
+.admission-search {
+
+    margin-bottom: 20px;
+
+}
+
+/* =====================================================
+   Filter
+===================================================== */
+
+.admission-filter {
+
+    margin-bottom: 25px;
+
+}
+
+/* =====================================================
+   Table
+===================================================== */
+
+.admission-table-container {
+
+    margin-top: 20px;
+
+}
+
+/* =====================================================
+   Pagination
+===================================================== */
+
+.pagination {
+
+    margin-top: 25px;
+
+}
+
+/* =====================================================
+   Responsive
+===================================================== */
+
+@media (max-width:992px) {
+
+    .admission-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+    .add-admission-btn {
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .admission-list-page {
+
+        padding: 20px;
+
+    }
+
+    .admission-header h2 {
+
+        font-size: 26px;
+
+    }
+
+}
+
+@media (max-width:576px) {
+
+    .admission-list-page {
+
+        padding: 15px;
+
+    }
+
+    .admission-header h2 {
+
+        font-size: 22px;
+
+    }
+
+    .admission-header p {
+
+        font-size: 14px;
+
+    }
+
+}

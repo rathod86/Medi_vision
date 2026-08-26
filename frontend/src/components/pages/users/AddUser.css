@@ -1,0 +1,116 @@
+/* =====================================================
+   ADD / EDIT USER PAGE (shared)
+===================================================== */
+
+.user-page {
+    width: 100%;
+    min-height: 100%;
+    padding-bottom: 24px;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   PAGE HEADER
+===================================================== */
+
+.user-page-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    max-width: 920px;
+    margin: 0 auto 22px;
+}
+
+.user-page-header-content h1 {
+    margin: 0 0 6px;
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--text-color);
+}
+
+.user-page-header-content p {
+    margin: 0;
+    font-size: 15px;
+    color: var(--text-muted);
+}
+
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.user-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+
+    height: 42px;
+    padding: 0 16px;
+
+    border: 1px solid rgba(209, 213, 219, 0.9);
+    border-radius: 10px;
+
+    background: var(--surface-color);
+    color: var(--text-color);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.user-back-btn:hover {
+    background: var(--surface-alt);
+}
+
+
+/* =====================================================
+   ERROR MESSAGE
+===================================================== */
+
+.user-page .user-error {
+    max-width: 920px;
+    margin: 0 auto 18px;
+    padding: 14px 16px;
+    border: 1px solid #fecaca;
+    border-radius: 12px;
+    background: #fef2f2;
+    color: #b91c1c;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   FORM CONTAINER
+===================================================== */
+
+.user-page .user-form {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .user-page-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .user-back-btn {
+        width: fit-content;
+    }
+
+    .user-page-header-content h1 {
+        font-size: 24px;
+    }
+}

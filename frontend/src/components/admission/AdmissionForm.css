@@ -1,0 +1,237 @@
+/* ============================================================
+   Admission Form - Professional Healthcare Styling
+============================================================ */
+
+.admission-form {
+    background: var(--surface-color);
+    padding: var(--space-8);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    margin: var(--space-6) 0;
+    border: 1px solid var(--border-color);
+    transition: all var(--transition);
+}
+
+.admission-form:hover {
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-200);
+}
+
+/* Heading */
+.admission-form h2 {
+    margin-bottom: var(--space-6);
+    color: var(--text-color);
+    font-size: var(--font-2xl);
+    font-weight: var(--font-bold);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: var(--space-4);
+    letter-spacing: -0.01em;
+}
+
+/* Form Grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-6);
+}
+
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Form Group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.form-group label {
+    font-weight: var(--font-semibold);
+    color: var(--text-color);
+    font-size: var(--font-sm);
+    letter-spacing: 0.3px;
+}
+
+.form-group label.required::after {
+    content: ' *';
+    color: var(--danger-600);
+}
+
+/* Form Inputs */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: var(--space-3) var(--space-4);
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius);
+    outline: none;
+    font-size: var(--font-base);
+    transition: all var(--transition-fast);
+    background: var(--surface-color);
+    color: var(--text-color);
+    font-family: inherit;
+
+}
+
+.form-group input:focus,
+
+.form-group select:focus,
+
+.form-group textarea:focus {
+
+    border-color: #0d6efd;
+
+    box-shadow: 0 0 6px rgba(13, 110, 253, 0.25);
+
+}
+
+.form-group textarea {
+
+    resize: vertical;
+
+    min-height: 100px;
+
+}
+
+/* ==========================================
+   Full Width Fields
+========================================== */
+
+.full-width {
+
+    grid-column: span 2;
+
+}
+
+/* ==========================================
+   Form Actions
+========================================== */
+
+.form-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-top: 30px;
+
+}
+
+/* ==========================================
+   Submit Button
+========================================== */
+
+.submit-btn {
+
+    background: #0d6efd;
+
+    color: #fff;
+
+    border: none;
+
+    padding: 12px 28px;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+}
+
+.submit-btn:hover {
+
+    background: #0b5ed7;
+
+    transform: translateY(-2px);
+
+}
+
+/* ==========================================
+   Placeholder
+========================================== */
+
+::placeholder {
+
+    color: #999;
+
+}
+
+/* ==========================================
+   Error Messages
+========================================== */
+
+.form-group small.error {
+
+    color: #dc3545;
+
+    font-size: 13px;
+
+    margin-top: 5px;
+
+    display: block;
+
+}
+
+.form-group input:invalid,
+.form-group select:invalid,
+.form-group textarea:invalid {
+
+    border-color: #dc3545;
+
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media (max-width: 992px) {
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .full-width {
+
+        grid-column: span 1;
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .admission-form {
+
+        padding: 20px;
+
+    }
+
+    .admission-form h2 {
+
+        font-size: 24px;
+
+    }
+
+    .submit-btn {
+
+        width: 100%;
+
+    }
+
+    .form-actions {
+
+        justify-content: center;
+
+    }
+
+}

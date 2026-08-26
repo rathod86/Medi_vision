@@ -1,0 +1,136 @@
+/* =====================================================
+   EDIT NURSE PAGE
+===================================================== */
+
+.nurse-edit-page {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background: #f8fafc;
+    padding: 20px;
+}
+
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.nurse-edit-loading {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 40px;
+    text-align: center;
+
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    color: #6b7280;
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   ERROR
+===================================================== */
+
+.nurse-edit-error {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 30px;
+
+    text-align: center;
+
+    background: #ffffff;
+    border: 1px solid #fecaca;
+    border-radius: 12px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.nurse-edit-error h3 {
+    margin: 0 0 10px;
+
+    color: #b91c1c;
+    font-size: 20px;
+}
+
+.nurse-edit-error p {
+    margin: 0 0 20px;
+
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   ERROR BUTTON
+===================================================== */
+
+.nurse-edit-error button {
+    padding: 10px 18px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.nurse-edit-error button:hover {
+    background: #1d4ed8;
+}
+
+
+/* =====================================================
+   API ERROR ALERT
+===================================================== */
+
+.nurse-edit-alert {
+    width: 100%;
+    max-width: 1200px;
+
+    box-sizing: border-box;
+
+    margin: 0 auto 16px;
+    padding: 12px 16px;
+
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+
+    background: #fef2f2;
+    color: #b91c1c;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .nurse-edit-page {
+        padding: 16px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .nurse-edit-page {
+        padding: 10px;
+    }
+
+    .nurse-edit-error {
+        margin: 40px auto;
+        padding: 20px;
+    }
+}

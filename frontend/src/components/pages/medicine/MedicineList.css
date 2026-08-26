@@ -1,0 +1,109 @@
+/* ===========================================
+   Medicine List Page
+=========================================== */
+
+.medicine-list-container {
+    padding: 30px;
+    background: #f4f7fc;
+    min-height: 100vh;
+}
+
+/* ===========================================
+   Header
+=========================================== */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+/* ===========================================
+   Add Medicine Button
+=========================================== */
+
+.add-btn {
+    background: #0d6efd;
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+    background: #0b5ed7;
+    transform: translateY(-2px);
+}
+
+/* ===========================================
+   Section Spacing
+=========================================== */
+
+.medicine-stats-container {
+    margin-bottom: 25px;
+}
+
+.medicine-search {
+    margin-bottom: 20px;
+}
+
+.medicine-filter {
+    margin-bottom: 20px;
+}
+
+.medicine-table-container {
+    margin-top: 20px;
+}
+
+.medicine-pagination {
+    margin-top: 25px;
+}
+
+/* ===========================================
+   Responsive
+=========================================== */
+
+@media (max-width: 992px) {
+
+    .medicine-list-container {
+        padding: 20px;
+    }
+
+    .header h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .medicine-list-container {
+        padding: 15px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .header h2 {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .add-btn {
+        width: 100%;
+        text-align: center;
+    }
+}

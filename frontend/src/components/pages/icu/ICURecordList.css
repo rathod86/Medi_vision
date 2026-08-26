@@ -1,0 +1,861 @@
+/* =====================================================
+   ICU RECORD LIST
+   File:
+   src/components/pages/icu/ICURecordList.css
+   ===================================================== */
+
+
+/* =====================================================
+   MAIN PAGE
+   ===================================================== */
+
+.icu-list-page {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 24px;
+
+    box-sizing: border-box;
+
+    background: #f5f7fb;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.icu-list-header {
+    max-width: 1400px;
+
+    margin: 0 auto 24px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.icu-list-header h2 {
+    margin: 0 0 6px;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    color: #111827;
+}
+
+.icu-list-header p {
+    margin: 0;
+
+    font-size: 14px;
+
+    color: #6b7280;
+}
+
+
+/* =====================================================
+   ADD BUTTON
+   ===================================================== */
+
+.icu-add-button {
+    height: 44px;
+
+    padding: 0 20px;
+
+    border: 1px solid #2563eb;
+    border-radius: 7px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.1s ease;
+}
+
+.icu-add-button:hover {
+    background: #1d4ed8;
+}
+
+.icu-add-button:active {
+    transform: translateY(1px);
+}
+
+
+/* =====================================================
+   FILTER BAR
+   ===================================================== */
+
+.icu-filter-bar {
+    max-width: 1400px;
+
+    margin: 0 auto 16px;
+
+    padding: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =====================================================
+   SEARCH
+   ===================================================== */
+
+.icu-search-box {
+    flex: 1;
+}
+
+.icu-search-box input {
+    width: 100%;
+
+    height: 42px;
+
+    padding: 0 12px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    color: #111827;
+
+    background: #ffffff;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.icu-search-box input:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.icu-search-box input::placeholder {
+    color: #9ca3af;
+}
+
+
+/* =====================================================
+   STATUS FILTER
+   ===================================================== */
+
+.icu-status-filter select {
+    min-width: 160px;
+
+    height: 42px;
+
+    padding: 0 12px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #374151;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+.icu-status-filter select:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* =====================================================
+   REFRESH BUTTON
+   ===================================================== */
+
+.icu-refresh-button {
+    height: 42px;
+
+    padding: 0 16px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #374151;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.icu-refresh-button:hover {
+    background: #f3f4f6;
+
+    border-color: #9ca3af;
+}
+
+
+/* =====================================================
+   SUMMARY
+   ===================================================== */
+
+.icu-list-summary {
+    max-width: 1400px;
+
+    margin: 0 auto 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 24px;
+
+    font-size: 13px;
+
+    color: #6b7280;
+}
+
+.icu-list-summary strong {
+    color: #111827;
+}
+
+
+/* =====================================================
+   TABLE CONTAINER
+   ===================================================== */
+
+.icu-table-container {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    overflow-x: auto;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =====================================================
+   TABLE
+   ===================================================== */
+
+.icu-record-table {
+    width: 100%;
+
+    min-width: 1100px;
+
+    border-collapse: collapse;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   TABLE HEADER
+   ===================================================== */
+
+.icu-record-table thead {
+    background: #f9fafb;
+}
+
+.icu-record-table th {
+    padding: 14px 12px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    text-align: left;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.3px;
+
+    color: #6b7280;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   TABLE BODY
+   ===================================================== */
+
+.icu-record-table td {
+    padding: 14px 12px;
+
+    border-bottom: 1px solid #f1f5f9;
+
+    vertical-align: middle;
+
+    color: #374151;
+}
+
+.icu-record-table tbody tr {
+    transition:
+        background-color 0.15s ease;
+}
+
+.icu-record-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+.icu-record-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =====================================================
+   ICU RECORD NUMBER
+   ===================================================== */
+
+.icu-record-number {
+    margin-bottom: 4px;
+
+    font-weight: 700;
+
+    color: #2563eb;
+}
+
+
+/* =====================================================
+   PATIENT NAME
+   ===================================================== */
+
+.patient-name {
+    margin-bottom: 4px;
+
+    font-weight: 600;
+
+    color: #111827;
+}
+
+
+/* =====================================================
+   SMALL TEXT
+   ===================================================== */
+
+.icu-record-table small {
+    display: block;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+
+    color: #9ca3af;
+}
+
+
+/* =====================================================
+   STATUS BADGE
+   ===================================================== */
+
+.icu-status-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 80px;
+
+    padding: 5px 9px;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   STATUS COLORS
+   ===================================================== */
+
+.status-critical {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.status-active {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.status-admitted {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+.status-stable {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.status-discharged {
+    background: #f3f4f6;
+    color: #4b5563;
+}
+
+.status-transferred {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.status-default {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+
+
+/* =====================================================
+   CRITICAL LEVEL BADGE
+   ===================================================== */
+
+.icu-critical-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 70px;
+
+    padding: 5px 9px;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   CRITICAL COLORS
+   ===================================================== */
+
+.critical-critical {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.critical-high {
+    background: #ffedd5;
+    color: #c2410c;
+}
+
+.critical-medium {
+    background: #fef3c7;
+    color: #a16207;
+}
+
+.critical-low {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.critical-default {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+
+
+/* =====================================================
+   VENTILATOR
+   ===================================================== */
+
+.ventilator-yes,
+.ventilator-no {
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+.ventilator-yes {
+    color: #dc2626;
+}
+
+.ventilator-no {
+    color: #16a34a;
+}
+
+
+/* =====================================================
+   ACTION BUTTONS
+   ===================================================== */
+
+.icu-action-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+/* =====================================================
+   ACTION BUTTON BASE
+   ===================================================== */
+
+.icu-action-buttons button {
+    height: 32px;
+
+    padding: 0 9px;
+
+    border-radius: 5px;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+/* =====================================================
+   VIEW
+   ===================================================== */
+
+.action-view {
+    border: 1px solid #bfdbfe;
+
+    background: #eff6ff;
+
+    color: #1d4ed8;
+}
+
+.action-view:hover {
+    background: #dbeafe;
+}
+
+
+/* =====================================================
+   EDIT
+   ===================================================== */
+
+.action-edit {
+    border: 1px solid #fde68a;
+
+    background: #fffbeb;
+
+    color: #b45309;
+}
+
+.action-edit:hover {
+    background: #fef3c7;
+}
+
+
+/* =====================================================
+   DELETE
+   ===================================================== */
+
+.action-delete {
+    border: 1px solid #fecaca;
+
+    background: #fef2f2;
+
+    color: #dc2626;
+}
+
+.action-delete:hover {
+    background: #fee2e2;
+}
+
+
+/* =====================================================
+   DISABLED ACTION
+   ===================================================== */
+
+.icu-action-buttons button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* =====================================================
+   EMPTY STATE
+   ===================================================== */
+
+.icu-empty-state {
+    max-width: 1400px;
+
+    min-height: 350px;
+
+    margin: 0 auto;
+
+    padding: 40px 20px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.icu-empty-icon {
+    margin-bottom: 14px;
+
+    font-size: 42px;
+}
+
+.icu-empty-state h3 {
+    margin: 0 0 8px;
+
+    font-size: 20px;
+
+    color: #374151;
+}
+
+.icu-empty-state p {
+    max-width: 500px;
+
+    margin: 0 0 20px;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color: #6b7280;
+}
+
+
+/* =====================================================
+   LOADING
+   ===================================================== */
+
+.icu-list-loading {
+    min-height: 70vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 14px;
+
+    color: #6b7280;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   LOADING SPINNER
+   ===================================================== */
+
+.icu-list-spinner {
+    width: 42px;
+    height: 42px;
+
+    border: 4px solid #e5e7eb;
+
+    border-top-color: #2563eb;
+
+    border-radius: 50%;
+
+    animation:
+        icuListSpinner 0.8s linear infinite;
+}
+
+
+@keyframes icuListSpinner {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .icu-list-page {
+        padding: 18px;
+    }
+
+    .icu-list-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .icu-add-button {
+        width: 100%;
+    }
+
+    .icu-filter-bar {
+        flex-wrap: wrap;
+    }
+
+    .icu-search-box {
+        flex-basis: 100%;
+    }
+
+    .icu-status-filter {
+        flex: 1;
+    }
+
+    .icu-status-filter select {
+        width: 100%;
+    }
+
+    .icu-refresh-button {
+        flex: 1;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .icu-list-page {
+        padding: 12px;
+    }
+
+    .icu-list-header h2 {
+        font-size: 22px;
+    }
+
+    .icu-list-header p {
+        font-size: 13px;
+    }
+
+    .icu-filter-bar {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .icu-search-box {
+        width: 100%;
+    }
+
+    .icu-status-filter {
+        width: 100%;
+    }
+
+    .icu-refresh-button {
+        width: 100%;
+    }
+
+    .icu-list-summary {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 5px;
+    }
+
+    .icu-table-container {
+        border-radius: 8px;
+    }
+
+    .icu-empty-state {
+        min-height: 300px;
+    }
+
+}

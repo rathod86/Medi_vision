@@ -1,0 +1,117 @@
+.availability-card{
+
+    background:#ffffff;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+
+    margin-top:25px;
+
+}
+
+.availability-header{
+
+    margin-bottom:20px;
+
+}
+
+.availability-header h2{
+
+    margin:0;
+
+    color:#1e293b;
+
+    font-size:24px;
+
+}
+
+.availability-header p{
+
+    margin-top:8px;
+
+    color:#64748b;
+
+}
+
+.availability-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.availability-table thead{
+
+    background:#2563eb;
+
+    color:#fff;
+
+}
+
+.availability-table th{
+
+    padding:15px;
+
+    text-align:left;
+
+}
+
+.availability-table td{
+
+    padding:15px;
+
+    border-bottom:1px solid #e2e8f0;
+
+}
+
+.availability-table tbody tr:hover{
+
+    background:#f8fafc;
+
+}
+
+.status{
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.available{
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+}
+
+.off{
+
+    background:#fee2e2;
+
+    color:#dc2626;
+
+}
+
+@media(max-width:768px){
+
+    .availability-table{
+
+        display:block;
+
+        overflow-x:auto;
+
+        white-space:nowrap;
+
+    }
+
+}

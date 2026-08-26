@@ -1,0 +1,30 @@
+# React / Node
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.env
+frontend/.env.local
+
+# Java / Maven
+backend/target/
+backend/.classpath
+backend/.project
+backend/.settings/
+backend/.factorypath
+
+# Backend uploaded files
+backend/uploads/
+
+# Backend configuration / secrets
+backend/src/main/resources/application.properties
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

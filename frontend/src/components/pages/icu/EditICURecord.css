@@ -1,0 +1,310 @@
+/* =====================================================
+   EDIT ICU RECORD PAGE
+   File:
+   src/components/pages/icu/EditICURecord.css
+   ===================================================== */
+
+
+/* =====================================================
+   MAIN PAGE
+   ===================================================== */
+
+.icu-edit-page {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 24px;
+
+    box-sizing: border-box;
+
+    background: #f5f7fb;
+}
+
+
+/* =====================================================
+   FORM CONTAINER
+   ===================================================== */
+
+.icu-edit-page .icu-form-container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   LOADING
+   ===================================================== */
+
+.icu-edit-loading {
+    min-height: 70vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    color: #4b5563;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   LOADING SPINNER
+   ===================================================== */
+
+.icu-loading-spinner {
+    width: 42px;
+    height: 42px;
+
+    border: 4px solid #e5e7eb;
+    border-top-color: #2563eb;
+
+    border-radius: 50%;
+
+    animation: icuEditSpinner 0.8s linear infinite;
+}
+
+
+@keyframes icuEditSpinner {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =====================================================
+   EMPTY / NOT FOUND
+   ===================================================== */
+
+.icu-edit-empty {
+    min-height: 70vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 24px;
+
+    text-align: center;
+}
+
+
+.icu-edit-empty h2 {
+    margin: 0;
+
+    font-size: 24px;
+
+    color: #374151;
+}
+
+
+.icu-edit-empty button {
+    min-width: 180px;
+
+    height: 44px;
+
+    padding: 0 20px;
+
+    border: 1px solid #2563eb;
+    border-radius: 7px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.1s ease;
+}
+
+
+.icu-edit-empty button:hover {
+    background: #1d4ed8;
+}
+
+
+.icu-edit-empty button:active {
+    transform: translateY(1px);
+}
+
+
+/* =====================================================
+   FORM SECTIONS
+   ===================================================== */
+
+.icu-edit-page .icu-form-section {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =====================================================
+   FORM ACTIONS
+   ===================================================== */
+
+.icu-edit-page .icu-form-actions {
+    display: flex;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 10px;
+}
+
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+
+.icu-edit-page .btn-primary,
+.icu-edit-page .btn-secondary {
+    min-width: 150px;
+
+    height: 44px;
+
+    padding: 0 20px;
+
+    border-radius: 7px;
+
+    font-family: inherit;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.1s ease;
+}
+
+
+/* =====================================================
+   UPDATE BUTTON
+   ===================================================== */
+
+.icu-edit-page .btn-primary {
+    border: 1px solid #2563eb;
+
+    background: #2563eb;
+
+    color: #ffffff;
+}
+
+
+.icu-edit-page .btn-primary:hover {
+    background: #1d4ed8;
+}
+
+
+.icu-edit-page .btn-primary:active {
+    transform: translateY(1px);
+}
+
+
+/* =====================================================
+   CANCEL BUTTON
+   ===================================================== */
+
+.icu-edit-page .btn-secondary {
+    border: 1px solid #d1d5db;
+
+    background: #ffffff;
+
+    color: #374151;
+}
+
+
+.icu-edit-page .btn-secondary:hover {
+    background: #f3f4f6;
+}
+
+
+/* =====================================================
+   DISABLED
+   ===================================================== */
+
+.icu-edit-page button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .icu-edit-page {
+        padding: 18px;
+    }
+
+    .icu-edit-page .icu-form-actions {
+        justify-content: stretch;
+    }
+
+    .icu-edit-page .btn-primary,
+    .icu-edit-page .btn-secondary {
+        flex: 1;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 480px) {
+
+    .icu-edit-page {
+        padding: 12px;
+    }
+
+    .icu-edit-page .icu-form-actions {
+        flex-direction: column-reverse;
+
+        width: 100%;
+    }
+
+    .icu-edit-page .btn-primary,
+    .icu-edit-page .btn-secondary {
+        width: 100%;
+    }
+
+    .icu-edit-empty h2 {
+        font-size: 20px;
+    }
+
+}

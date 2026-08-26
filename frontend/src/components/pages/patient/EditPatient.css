@@ -1,0 +1,143 @@
+/* ==========================================
+   Edit Patient Page
+========================================== */
+
+.edit-patient-page {
+
+    min-height: 100vh;
+
+    background: #f5f7fb;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+}
+
+/* ==========================================
+   Header
+========================================== */
+
+.edit-patient-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+}
+
+.edit-patient-header h2 {
+
+    margin: 0;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    color: #2563eb;
+
+}
+
+.edit-patient-header p {
+
+    margin-top: 6px;
+
+    color: #666;
+
+    font-size: 15px;
+
+}
+
+/* ==========================================
+   Back Button
+========================================== */
+
+.back-btn {
+
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+}
+
+.back-btn:hover {
+
+    background: #1d4ed8;
+
+}
+
+/* ==========================================
+   Loading
+========================================== */
+
+.loading-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 400px;
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+    color: #2563eb;
+
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media (max-width: 768px) {
+
+    .edit-patient-page {
+
+        padding: 20px;
+
+    }
+
+    .edit-patient-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+    .edit-patient-header h2 {
+
+        font-size: 24px;
+
+    }
+
+    .back-btn {
+
+        width: 100%;
+
+    }
+
+}

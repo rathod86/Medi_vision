@@ -1,0 +1,158 @@
+/* ============================================================
+   Appointment Table - Professional Healthcare Styling
+============================================================ */
+
+.appointment-table-container {
+    overflow-x: auto;
+    background: var(--surface-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition);
+}
+
+.appointment-table-container:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.appointment-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--font-sm);
+}
+
+.appointment-table thead {
+    background: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-700) 100%);
+    color: white;
+}
+
+.appointment-table th {
+    padding: var(--space-4);
+    text-align: left;
+    font-weight: var(--font-semibold);
+    letter-spacing: 0.3px;
+    border-bottom: 2px solid var(--primary-800);
+}
+
+.appointment-table td {
+    padding: var(--space-4);
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+.appointment-table tbody tr {
+    transition: all var(--transition-fast);
+}
+
+.appointment-table tbody tr:hover {
+    background: var(--primary-50);
+}
+
+.appointment-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Status Badge */
+.status {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    color: white;
+    font-size: var(--font-xs);
+    font-weight: var(--font-semibold);
+    white-space: nowrap;
+    letter-spacing: 0.3px;
+}
+
+.status.scheduled {
+
+    background:#0d6efd;
+
+}
+
+.status.completed{
+
+    background:#198754;
+
+}
+
+.status.cancelled{
+
+    background:#dc3545;
+
+}
+
+.status.no-show{
+
+    background:#ffc107;
+
+    color:#000;
+
+}
+
+.view-btn,
+.edit-btn,
+.delete-btn{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:8px;
+
+    margin-right:6px;
+
+    border-radius:6px;
+
+    color:#fff;
+
+}
+
+.view-btn{
+
+    background:#0dcaf0;
+
+}
+
+.edit-btn{
+
+    background:#198754;
+
+}
+
+.delete-btn{
+
+    background:#dc3545;
+
+}
+
+.view-btn:hover{
+
+    background:#31d2f2;
+
+}
+
+.edit-btn:hover{
+
+    background:#157347;
+
+}
+
+.delete-btn:hover{
+
+    background:#bb2d3b;
+
+}
+
+.no-data{
+
+    text-align:center;
+
+    padding:40px;
+
+    font-size:18px;
+
+    color:#666;
+
+}

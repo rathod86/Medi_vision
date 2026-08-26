@@ -1,0 +1,223 @@
+/* ============================================================
+   Premium Login — Medi Vision
+   ============================================================ */
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-8) var(--space-5);
+    background:
+        radial-gradient(circle at 15% 20%, rgba(37, 99, 235, 0.12), transparent 40%),
+        radial-gradient(circle at 85% 80%, rgba(20, 184, 166, 0.1), transparent 40%),
+        linear-gradient(160deg, #f8fafc 0%, #eef2ff 50%, #f1f5f9 100%);
+}
+
+.login-card {
+    width: 100%;
+    max-width: 460px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    box-shadow: var(--shadow-lg);
+    backdrop-filter: blur(12px);
+    animation: medi-card-in 0.5s ease;
+}
+
+@keyframes medi-card-in {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: var(--space-6);
+}
+
+.login-header h1 {
+    margin: 0;
+    font-size: var(--font-3xl);
+    font-weight: 800;
+    color: var(--text-color);
+    letter-spacing: -0.03em;
+}
+
+.login-header p {
+    margin-top: var(--space-2);
+    margin-bottom: 0;
+    color: var(--text-muted);
+    font-size: var(--font-sm);
+}
+
+.login-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-card form label {
+    margin-bottom: var(--space-2);
+    color: var(--text-secondary);
+    font-size: var(--font-sm);
+    font-weight: 600;
+}
+
+.login-card form input {
+    width: 100%;
+    height: 44px;
+    padding: 0 var(--space-4);
+    margin-bottom: var(--space-4);
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    outline: none;
+    background: var(--surface-color);
+    color: var(--text-color);
+    font-size: var(--font-base);
+    transition: var(--transition-fast);
+}
+
+.login-card form input::placeholder {
+    color: #94a3b8;
+}
+
+.login-card form input:focus {
+    border-color: var(--primary-500);
+    box-shadow: var(--focus-ring);
+}
+
+.login-card form input:disabled {
+    background: var(--surface-alt);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.login-error {
+    margin-bottom: var(--space-4);
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-sm);
+    background: var(--danger-bg);
+    color: var(--danger-text);
+    font-size: var(--font-sm);
+    font-weight: 600;
+    border: 1px solid #fecaca;
+}
+
+.login-card form button {
+    width: 100%;
+    height: 46px;
+    border: none;
+    border-radius: var(--radius-sm);
+    background: linear-gradient(135deg, var(--primary-600), var(--primary-700));
+    color: #fff;
+    font-size: var(--font-base);
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: var(--shadow-primary);
+    transition: var(--transition);
+}
+
+.login-card form button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 36px rgba(37, 99, 235, 0.32);
+}
+
+.login-card form button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.signup-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: var(--space-6);
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--border-light);
+    color: var(--text-muted);
+    font-size: var(--font-sm);
+}
+
+.signup-link a {
+    color: var(--primary-600);
+    font-weight: 700;
+}
+
+.signup-link a:hover {
+    color: var(--primary-700);
+    text-decoration: underline;
+}
+
+.login-hint {
+    margin-top: var(--space-5);
+    padding: var(--space-4);
+    border-radius: var(--radius);
+    background: var(--surface-alt);
+    border: 1px solid var(--border-color);
+}
+
+.login-hint-title {
+    margin-bottom: var(--space-3);
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.login-hint p {
+    margin: 6px 0;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+
+.login-hint strong {
+    color: var(--text-secondary);
+}
+
+.signup-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: var(--space-4);
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius);
+    background: var(--primary-50);
+    border: 1px solid var(--primary-100);
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+
+.signup-info strong {
+    color: var(--primary-700);
+    font-size: var(--font-sm);
+}
+
+.signup-info span {
+    color: var(--text-muted);
+}
+
+@media (max-width: 576px) {
+    .login-page {
+        padding: var(--space-5);
+        align-items: flex-start;
+    }
+
+    .login-card {
+        margin-top: var(--space-5);
+        padding: var(--space-6) var(--space-5);
+    }
+
+    .login-header h1 {
+        font-size: var(--font-2xl);
+    }
+}

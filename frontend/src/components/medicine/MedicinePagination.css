@@ -1,0 +1,51 @@
+.medicine-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.pagination-btn {
+    min-width: 45px;
+    padding: 10px 18px;
+    border: 1px solid #0d6efd;
+    background: white;
+    color: #0d6efd;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background: #0d6efd;
+    color: white;
+}
+
+.pagination-btn.active {
+    background: #0d6efd;
+    color: white;
+}
+
+.pagination-btn:disabled {
+    background: #e9ecef;
+    border-color: #ced4da;
+    color: #6c757d;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+
+    .medicine-pagination {
+        gap: 6px;
+    }
+
+    .pagination-btn {
+        min-width: 40px;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}

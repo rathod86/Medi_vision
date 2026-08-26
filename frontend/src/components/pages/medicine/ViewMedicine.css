@@ -1,0 +1,116 @@
+.view-medicine-container {
+    min-height: 100vh;
+    background: #f4f7fc;
+    padding: 40px 20px;
+}
+
+.medicine-card {
+    max-width: 1000px;
+    margin: auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+}
+
+.card-header {
+    background: #0d6efd;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #0d6efd;
+}
+
+.detail-item label {
+    font-weight: 600;
+    color: #0d6efd;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.detail-item span {
+    color: #333;
+    font-size: 15px;
+    word-break: break-word;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 25px;
+    border-top: 1px solid #dee2e6;
+}
+
+.edit-btn,
+.back-btn {
+    padding: 10px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.edit-btn {
+    background: #0d6efd;
+}
+
+.edit-btn:hover {
+    background: #0b5ed7;
+}
+
+.back-btn {
+    background: #6c757d;
+}
+
+.back-btn:hover {
+    background: #5a6268;
+}
+
+@media (max-width: 768px) {
+
+    .details-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .button-group {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .edit-btn,
+    .back-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .card-header h2 {
+        font-size: 24px;
+    }
+}

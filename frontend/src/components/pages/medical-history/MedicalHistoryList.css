@@ -1,0 +1,907 @@
+/* =====================================================
+   MEDICAL HISTORY LIST PAGE
+   ===================================================== */
+
+.medical-history-list-page {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 24px;
+
+    box-sizing: border-box;
+
+    background: #f5f7fb;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.medical-history-list-header {
+    max-width: 1400px;
+
+    margin: 0 auto 24px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 20px;
+}
+
+
+.medical-history-list-header h1 {
+    margin: 0 0 8px;
+
+    color: #1f2937;
+
+    font-size: 28px;
+
+    font-weight: 700;
+}
+
+
+.medical-history-list-header p {
+    margin: 0;
+
+    color: #6b7280;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   ADD BUTTON
+   ===================================================== */
+
+.add-medical-history-button {
+    min-height: 44px;
+
+    padding: 0 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.15s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.add-medical-history-button:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 4px 10px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =====================================================
+   ERROR
+   ===================================================== */
+
+.medical-history-list-error {
+    max-width: 1400px;
+
+    margin: 0 auto 20px;
+
+    padding: 14px 16px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    border: 1px solid #fecaca;
+
+    border-radius: 8px;
+
+    background: #fef2f2;
+
+    color: #b91c1c;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+.medical-history-list-error span {
+    white-space: pre-line;
+}
+
+
+/* =====================================================
+   STATISTICS
+   ===================================================== */
+
+.medical-history-statistics {
+    max-width: 1400px;
+
+    margin: 0 auto 24px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+.stat-card {
+    min-height: 110px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+.stat-content {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.stat-content span {
+    color: #6b7280;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.stat-content strong {
+    color: #111827;
+
+    font-size: 28px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   FILTERS
+   ===================================================== */
+
+.medical-history-filters {
+    max-width: 1400px;
+
+    margin: 0 auto 14px;
+
+    padding: 16px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(250px, 1fr)
+        200px
+        auto;
+
+    gap: 12px;
+
+    align-items: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+}
+
+
+/* =====================================================
+   SEARCH
+   ===================================================== */
+
+.search-box input {
+    width: 100%;
+
+    height: 44px;
+
+    padding: 0 14px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    color: #111827;
+
+    background: #ffffff;
+
+    font-size: 14px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.search-box input:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+.search-box input::placeholder {
+    color: #9ca3af;
+}
+
+
+/* =====================================================
+   STATUS FILTER
+   ===================================================== */
+
+.status-filter select {
+    width: 100%;
+
+    height: 44px;
+
+    padding: 0 12px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #374151;
+
+    font-size: 14px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+.status-filter select:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* =====================================================
+   CLEAR FILTER
+   ===================================================== */
+
+.clear-filter-button {
+    height: 44px;
+
+    padding: 0 18px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #374151;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.clear-filter-button:hover {
+    background: #f3f4f6;
+
+    border-color: #9ca3af;
+}
+
+
+/* =====================================================
+   RESULT INFORMATION
+   ===================================================== */
+
+.medical-history-result-info {
+    max-width: 1400px;
+
+    margin: 0 auto 10px;
+
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+.medical-history-result-info strong {
+    color: #374151;
+}
+
+
+/* =====================================================
+   TABLE CARD
+   ===================================================== */
+
+.medical-history-table-card {
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.04);
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   TABLE WRAPPER
+   ===================================================== */
+
+.medical-history-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+/* =====================================================
+   TABLE
+   ===================================================== */
+
+.medical-history-table {
+    width: 100%;
+
+    min-width: 1000px;
+
+    border-collapse: collapse;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   TABLE HEADER
+   ===================================================== */
+
+.medical-history-table thead {
+    background: #f9fafb;
+}
+
+
+.medical-history-table th {
+    padding: 14px 16px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    color: #4b5563;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-align: left;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.3px;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   TABLE BODY
+   ===================================================== */
+
+.medical-history-table td {
+    padding: 15px 16px;
+
+    border-bottom: 1px solid #f0f1f3;
+
+    color: #374151;
+
+    vertical-align: middle;
+}
+
+
+.medical-history-table tbody tr {
+    transition:
+        background-color 0.15s ease;
+}
+
+
+.medical-history-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+
+.medical-history-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =====================================================
+   PATIENT INFO
+   ===================================================== */
+
+.patient-info,
+.doctor-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.patient-info strong,
+.doctor-info strong {
+    color: #111827;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.patient-info small,
+.doctor-info small {
+    color: #6b7280;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   DIAGNOSIS
+   ===================================================== */
+
+.diagnosis-text {
+    max-width: 220px;
+
+    color: #374151;
+
+    line-height: 1.5;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =====================================================
+   STATUS BADGE
+   ===================================================== */
+
+.history-status-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 75px;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+
+.history-status-badge.status-active {
+    background: #dcfce7;
+
+    color: #166534;
+}
+
+
+.history-status-badge.status-chronic {
+    background: #fef3c7;
+
+    color: #92400e;
+}
+
+
+.history-status-badge.status-resolved {
+    background: #dbeafe;
+
+    color: #1e40af;
+}
+
+
+.history-status-badge.status-inactive {
+    background: #f3f4f6;
+
+    color: #4b5563;
+}
+
+
+.history-status-badge.status-unknown {
+    background: #f3f4f6;
+
+    color: #6b7280;
+}
+
+
+/* =====================================================
+   TABLE ACTIONS
+   ===================================================== */
+
+.table-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+.table-actions button {
+    min-height: 32px;
+
+    padding: 0 10px;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.15s ease,
+        transform 0.15s ease;
+}
+
+
+/* View */
+
+.view-action {
+    border: 1px solid #bfdbfe;
+
+    background: #eff6ff;
+
+    color: #1d4ed8;
+}
+
+
+.view-action:hover {
+    background: #dbeafe;
+
+    transform: translateY(-1px);
+}
+
+
+/* Edit */
+
+.edit-action {
+    border: 1px solid #bbf7d0;
+
+    background: #f0fdf4;
+
+    color: #15803d;
+}
+
+
+.edit-action:hover {
+    background: #dcfce7;
+
+    transform: translateY(-1px);
+}
+
+
+/* Delete */
+
+.delete-action {
+    border: 1px solid #fecaca;
+
+    background: #fef2f2;
+
+    color: #dc2626;
+}
+
+
+.delete-action:hover {
+    background: #fee2e2;
+
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   EMPTY STATE
+   ===================================================== */
+
+.no-medical-history {
+    padding: 70px 20px;
+
+    text-align: center;
+}
+
+
+.no-medical-history h3 {
+    margin: 0 0 10px;
+
+    color: #1f2937;
+
+    font-size: 20px;
+}
+
+
+.no-medical-history p {
+    margin: 0 0 20px;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+.no-medical-history button {
+    min-height: 40px;
+
+    padding: 0 16px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #374151;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.no-medical-history button:hover {
+    background: #f3f4f6;
+}
+
+
+/* =====================================================
+   LOADING
+   ===================================================== */
+
+.medical-history-loading {
+    min-height: 400px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 16px;
+
+    color: #6b7280;
+
+    font-size: 15px;
+}
+
+
+.loading-spinner {
+    width: 38px;
+
+    height: 38px;
+
+    border: 4px solid #e5e7eb;
+
+    border-top-color: #2563eb;
+
+    border-radius: 50%;
+
+    animation:
+        medicalHistoryListSpin 0.8s linear infinite;
+}
+
+
+@keyframes medicalHistoryListSpin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 1000px) {
+
+    .medical-history-list-page {
+        padding: 18px;
+    }
+
+
+    .medical-history-statistics {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    .medical-history-filters {
+        grid-template-columns:
+            1fr 180px auto;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 700px) {
+
+    .medical-history-list-page {
+        padding: 12px;
+    }
+
+
+    .medical-history-list-header {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        margin-bottom: 18px;
+    }
+
+
+    .medical-history-list-header h1 {
+        font-size: 23px;
+    }
+
+
+    .add-medical-history-button {
+        width: 100%;
+    }
+
+
+    .medical-history-statistics {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+    }
+
+
+    .stat-card {
+        min-height: 95px;
+
+        padding: 15px;
+    }
+
+
+    .stat-content strong {
+        font-size: 23px;
+    }
+
+
+    .medical-history-filters {
+        grid-template-columns: 1fr;
+
+        padding: 12px;
+    }
+
+
+    .clear-filter-button {
+        width: 100%;
+    }
+
+
+    .medical-history-list-error {
+        flex-direction: column;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 400px) {
+
+    .medical-history-list-page {
+        padding: 8px;
+    }
+
+
+    .medical-history-list-header h1 {
+        font-size: 21px;
+    }
+
+
+    .medical-history-list-header p {
+        font-size: 13px;
+    }
+
+
+    .medical-history-statistics {
+        grid-template-columns: 1fr;
+    }
+
+
+    .stat-card {
+        min-height: 80px;
+    }
+
+
+    .stat-content {
+        width: 100%;
+
+        flex-direction: row;
+
+        justify-content: space-between;
+
+        align-items: center;
+    }
+}

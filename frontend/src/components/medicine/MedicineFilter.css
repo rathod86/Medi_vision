@@ -1,0 +1,60 @@
+.medicine-filter{
+    display:flex;
+    gap:15px;
+    margin:25px 0;
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+.medicine-filter input,
+.medicine-filter select{
+
+    padding:10px 14px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:15px;
+    min-width:220px;
+    outline:none;
+    transition:.3s;
+}
+
+.medicine-filter input:focus,
+.medicine-filter select:focus{
+
+    border-color:#0d6efd;
+    box-shadow:0 0 5px rgba(13,110,253,.3);
+}
+
+.reset-btn{
+
+    background:#dc3545;
+    color:white;
+    border:none;
+    padding:11px 22px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+.reset-btn:hover{
+
+    background:#bb2d3b;
+}
+
+@media(max-width:768px){
+
+    .medicine-filter{
+
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .medicine-filter input,
+    .medicine-filter select,
+    .reset-btn{
+
+        width:100%;
+    }
+
+}

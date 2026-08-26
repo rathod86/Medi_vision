@@ -1,0 +1,139 @@
+/* =====================================================
+   ADD NURSE PAGE
+===================================================== */
+
+.nurse-add-page {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background: #f8fafc;
+    padding: 20px;
+}
+
+
+/* =====================================================
+   FORM WRAPPER
+===================================================== */
+
+.nurse-add-page .nurse-form-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   PAGE HEADER
+===================================================== */
+
+.nurse-add-page .nurse-form-header {
+    margin-bottom: 24px;
+}
+
+
+/* =====================================================
+   FORM SECTIONS
+===================================================== */
+
+.nurse-add-page .form-section {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =====================================================
+   FORM INPUTS
+===================================================== */
+
+.nurse-add-page input,
+.nurse-add-page select,
+.nurse-add-page textarea {
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   ACTION BUTTONS
+===================================================== */
+
+.nurse-add-page .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+    padding-bottom: 30px;
+}
+
+
+/* =====================================================
+   CANCEL BUTTON
+===================================================== */
+
+.nurse-add-page .btn-cancel {
+    min-width: 120px;
+}
+
+
+/* =====================================================
+   SUBMIT BUTTON
+===================================================== */
+
+.nurse-add-page .btn-submit {
+    min-width: 140px;
+}
+
+
+/* =====================================================
+   LOADING STATE
+===================================================== */
+
+.nurse-add-page .btn:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+
+/* =====================================================
+   RESPONSIVE - TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .nurse-add-page {
+        padding: 16px;
+    }
+
+    .nurse-add-page .form-actions {
+        justify-content: stretch;
+    }
+
+    .nurse-add-page .form-actions .btn {
+        flex: 1;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE - MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .nurse-add-page {
+        padding: 10px;
+    }
+
+    .nurse-add-page .form-actions {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .nurse-add-page .form-actions .btn {
+        width: 100%;
+        min-width: 100%;
+    }
+}
