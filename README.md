@@ -1,6 +1,6 @@
 # Medi Vision
 
-Medi Vision is a role-based hospital management system built with React and Vite. It provides a single web application for managing patients, doctors, appointments, admissions, billing, medicines, prescriptions, laboratory reports, ICU records, nurses, medical histories, and users.
+Medi Vision is a role-based hospital management system built with Java,Javascript,MYSQL,SpringBoot,JPA server, React and Vite. It provides a single web application for managing patients, doctors, appointments, admissions, billing, medicines, prescriptions, laboratory reports, ICU records, nurses, medical histories, and users.
 
 The repository currently includes a runnable Express mock API. The mock API is useful for local development and UI demonstrations; it stores data in memory and resets when the server restarts.
 
